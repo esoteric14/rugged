@@ -1,0 +1,51 @@
+ <aside class="span3 sidebar" k-partial>
+  <div class="sidebar-widget widget_search">
+    <form>
+      <div class="input-append row-fluid">
+        <input class="span12" placeholder="search" type="text">
+        <i class="icon-search"></i>
+        <button class="btn hide" type="submit">
+          search
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="sidebar-widget widget_categories">
+    <h3 class="sidebar-header">Categories</h3>
+    <ul k-repeat="[[ver in ruggedmonitoring.industryverticals]]">
+      <li>
+        <h4>
+          <a href="#">
+            [[ver.name]]
+          </a>
+        </h4>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="sidebar-widget widget_recent_entries">
+    <h3 class="sidebar-header">Recent posts</h3>
+    <ul k-repeat="[[ruggedmonitoring.blogs, u, 0:5]]">
+      <li>
+        <div class="row-fluid">
+        
+          <div class="span9">
+            <h4>
+              <a href="[[View('/update-details.html').setObject(ruggedmonitoring.blogs[u])]]">
+               [[ruggedmonitoring.blogs[u].title.substr(0,50)]]
+              </a>
+            </h4>
+            <h5 class="light">
+              [[ruggedmonitoring.blogs[u].createdon]]
+            </h5>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="sidebar-widget widget_twitter">
+    <h3 class="sidebar-header">Twitter feed</h3>
+    <div class="twitter-feed"></div>
+  </div>
+</aside>

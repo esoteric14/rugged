@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if (gt IE 8)]><!--> <html lang="en"> <!--<![endif]-->
+<head k-dl="/industry-vertical/[[vertical_id]]">
+  <!--SEO Meta-->
+  <meta name="description" content="[[ruggedmonitoring.business_details.business_name]] in Québec, [[ruggedmonitoring.business_details.about_ruggedmonitoring.substr(0,78)]]."/>
+  <meta name="keywords" content="[[ruggedmonitoring.business_details.custom_keywords]]">
+  <!--twitter-->
+  <meta name="twitter:image" content="[[ruggedmonitoring.business_details.home_banner.url]]">
+  <meta name="twitter:description" content="[[ruggedmonitoring.business_details.business_name]] - [[ruggedmonitoring.business_details.about_ruggedmonitoring.substr(0,230).replace('\n','')]]">
+  <meta name="twitter:title" content="Home | [[ruggedmonitoring.business_details.business_name]]">
+  <meta name="twitter:card" content="summary">
+  <!--facebook-->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Home | [[ruggedmonitoring.business_details.business_name]]">
+  <meta property="og:url" content="[[ruggedmonitoring.rootaliasurl.url]]">
+  <meta property="og:image" content="[[ruggedmonitoring.business_details.home_banner.url]]">
+  <meta property="og:site_name" content="[[ruggedmonitoring.business_details.business_name]]">
+  <meta property="og:description" content="[[ruggedmonitoring.business_details.business_name]] - [[ruggedmonitoring.business_details.about_ruggedmonitoring.substr(0,230).replace('\n','')]]">
+  
+  
+  <title>[[vertical_id]] - Rugged Monitoring</title>
+  
+  [[Partial('/partial/_commonHEAD.html')]]
+  [[Partial('/partial/_schemaLocalBusiness.html')]]
+</head>
+<body>
+  <div class="wrapper" >
+    <!-- Page Header -->
+    [[Partial('/partial/_header.html')]]
+    <!-- Main Content -->
+    <div id="content" role="main" k-repeat="[[vertical in ruggedmonitoring.industryverticals]]">
+      <div k-show="[[vertical.vid == vertical_id]]">
+        <!-- Promo Section -->
+        <section class="section blackbg">
+          <div class="container-fluid">
+            <div class="row-fluid">
+              <div class="super-hero-unit">
+                <figure>
+                   <picture>
+                      <source srcset="[[vertical.banner_image.url]]" media="(min-width: 1200px)" />
+                      <source srcset="[[vertical.mobile_banner_image.url]]" media="(max-width: 420px)" />
+                      <img src="[[vertical.banner_image.url]]"  alt="[[vertical.banner_image.description]]" />
+                    </picture>
+                  
+                    <div class="flex-caption slidertxt">
+                    <figcaption >
+                        <div class="bannerblock">
+                          <h1>
+                            [[vertical.name]]
+                          </h1>
+                          <p>[[vertical.short_description]]</p>
+                       </div>
+                       <!-- <br>
+                       <a href="/industry-vertical/[[vertical.vid]]" class="more-link">LEARN MORE</a>-->
+                    </figcaption>
+                  </div>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Our Categories -->
+        <section class="section spec-section section-padded" >
+       
+        
+          <div class="container-fluid">
+          <!-- Breadcrumb --> 
+          <div class="row-fluid">
+           <div class="span12">
+              <ul class="breadcrumb">
+                <li><a href="/">Home</a> <span class="divider">»</span></li>
+                <li><a>Industry</a> <span class="divider">»</span></li>
+                <li class="active">[[vertical.name]]</li>
+              </ul>
+           </div>
+          </div>
+            <!-- end: Breadcrumb -->
+          <div class="row-fluid" k-show="[[vertical.vertical_categories.length() > 0]]">
+             <!--Vertical Categories-->
+              <ul class="thumbnails portfolio" k-repeat="[[vertical.vertical_categories, i ,0:4]]">
+              <li class="span3">
+                <figure class="round-box box-huge no-rounded">
+                  <a class="box-inner" href="[[vertical.vertical_categories[i].external_link.url != null ? vertical.vertical_categories[i].external_link.url : '#']]"  title="[[vertical.vertical_categories[i].external_link.description]]" rel="group" >
+                    <img  class="img-circle" style="height: 200px;width: 100%;" alt="[[vertical.vertical_categories[i].image.description]]"  src="[[vertical.vertical_categories[i].image.url]]">
+                  </a>
+                  <figcaption>
+                    <h4>
+                      <a class="portfolio-title" href="[[vertical.vertical_categories[i].external_link.url != null ? vertical.vertical_categories[i].external_link.url : '#']]">
+                        [[vertical.vertical_categories[i].name]]
+                      </a>
+                    </h4>
+                  </figcaption>
+                </figure>
+              </li>
+            </ul>
+            </div>
+          </div>
+        </section>
+        <!-- Our work -->
+        <section class="section section-alt">
+          <div class="container-fluid">
+            <div class="section-header">
+              <h1>
+                Why
+                <small class="light">Rugged Monitoring + [[vertical.name]]?</small>
+              </h1>
+            </div>
+            <div class="row-fluid">
+              <div class="container">
+                [[vertical.description.text]]
+              </div>
+            </div>
+            
+            <div class="row-fluid" k-show="[[vertical.main_gif != null]]">
+              <div class="container">
+                <img src="[[vertical.main_gif.url]]" alt="[[vertical.main_gif.description]]">
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Related Categories -->
+        <section class="section spec-section section-alt">
+        <div class="container-fluid">
+          <div class="row-fluid">
+            <div class="section-header">
+              <h1>
+                Related
+                <small class="light">Product Categories</small>
+              </h1>
+            </div>
+            
+            <ul class="thumbnails portfolio" k-repeat="[[cat in ruggedmonitoring.product_categories]]">
+              <li class="span3"  k-show="[[cat.industry_verticals.indexof(vertical.vid) >= 0]]">
+                <figure class="round-box box-huge no-rounded">
+                  <a class="box-inner fancybox-media" href="/product-category/[[cat.pcid]]"  title="[[cat.name]]" rel="group" >
+                    <img  class="img-circle" style="height: 200px;width: 100%;" alt="[[cat.tile_image.description]]"  src="[[cat.tile_image.url]]">
+                
+                  </a>
+                  <figcaption>
+                    <h4>
+                      <a class="portfolio-title" href="/product-category/[[cat.pcid]]"  title="[[cat.name]]">
+                      [[cat.name]]
+                      </a>
+                    </h4>
+                     <p>
+                        [[cat.short_description.substr(0,50)]][[cat.short_description.length() > 50 ? '...' : '']]
+                    </p>
+                     <a class="more-link" href="/product-category/[[cat.pcid]]"  title="[[cat.name]]">
+                    LEARN MORE
+                  </a>
+                  </figcaption>
+                </figure>
+              </li>
+            </ul>
+          </div>
+     
+         
+        </div>
+      </section>
+        <!--Downloads-->
+        <section class="section">
+          <div class="container-fluid">
+            <div class="section-header">
+              <h1>
+                Downloads
+                <!--<small class="light">Navigation</small>-->
+              </h1>
+            </div>
+            <div class="row-fluid downloads">
+              <div k-repeat="[[brochure in vertical.industry_brochures]]" class="span8">
+                 <div class="list_link" style="margin-bottom:0px;">
+                    <p>
+                      <a class="download-link-class"  title="[[brochure.description]]" href="[[brochure.url]]" target="_blank">[[brochure.description]]</a>
+                    </p>
+                  </div>
+              </div>
+              <div class="span4">
+                   <div class="list_link_lock" >
+                    <p style="padding-left:8px;">
+                      <a title="More Downloads" href="/downloads">More Downloads</a>
+                    </p>
+                </div>
+              </div>
+            </div>
+            <br />
+            <br />
+          </div>
+        </section>
+        <!--Keywords-->
+        <section class="section">
+          <div class="container-fluid">
+            <div class="row-fluid" k-show="[[vertical.description.keywords.length() > 0]]">
+              <div class="sidebar-widget widget_tag_cloud">
+                  <h6 class="sidebar-header">Tags</h6>
+                  <ul k-repeat="[[keyword in vertical.description.keywords]]">
+                    <li>
+                      <a href="/search/[[keyword.urlencode()]]">
+                        <span>[[keyword]]</span>
+                      </a>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      <!--Latest news-->
+        [[Partial('/partial/_latestNews.html')]]
+        [[Partial('/partial/_footer2.html')]]
+      </div>
+    </div>
+  </div>
+  <!-- Page Footer -->
+ 
+  <script src="javascripts/jquery.min.js" type="text/javascript"></script>
+  <script src="javascripts/bootstrap.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.flexslider-min.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.tweet.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.fancybox-media.js" type="text/javascript"></script>
+  <script src="javascripts/moment.min.js" type="text/javascript"></script>
+  <script src="javascripts/script.js" type="text/javascript"></script>
+
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if (gt IE 8)]><!--> 
+<html lang="en"> <!--<![endif]-->
+<head k-dl="/Search/[[search_text]]">
+  <!--SEO Meta-->
+  <meta name="description" content="[[ruggedmonitoring.business_details.business_name]] in Québec, [[ruggedmonitoring.business_details.about_ruggedmonitoring.substr(0,78)]]."/>
+  <meta name="keywords" content="[[ruggedmonitoring.business_details.custom_keywords]]">
+  <!--twitter-->
+  <meta name="twitter:image" content="[[ruggedmonitoring.business_details.home_banner.url]]">
+  <meta name="twitter:description" content="[[ruggedmonitoring.business_details.business_name]] - [[ruggedmonitoring.business_details.about_ruggedmonitoring.substr(0,230).replace('\n','')]]">
+  <meta name="twitter:title" content="Home | [[ruggedmonitoring.business_details.business_name]]">
+  <meta name="twitter:card" content="summary">
+  <!--facebook-->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Home | [[ruggedmonitoring.business_details.business_name]]">
+  <meta property="og:url" content="[[ruggedmonitoring.rootaliasurl.url]]">
+  <meta property="og:image" content="[[ruggedmonitoring.business_details.home_banner.url]]">
+  <meta property="og:site_name" content="[[ruggedmonitoring.business_details.business_name]]">
+  <meta property="og:description" content="[[ruggedmonitoring.business_details.business_name]] - [[ruggedmonitoring.business_details.about_ruggedmonitoring.substr(0,230).replace('\n','')]]">
+  
+  
+  <title>Discussion / Blogs to Rugged Monitoring</title>
+  
+  [[Partial('/partial/_commonHEAD.html')]]
+  [[Partial('/partial/_schemaLocalBusiness.html')]]
+  
+  <style>
+        .search-result {
+            color: #1a4e9b
+        }
+
+        .tittle-dec {
+            text-transform: none;
+            margin-top: 10px
+        }
+
+        .border-box {
+            border: 1px solid #ececec;
+            margin: 20px 0px;
+        }
+
+        .keyphrases-content {
+            position: relative;
+            padding: 15px 20px;
+        }
+
+        .keyphrases-content ul {
+            list-style: none;
+        }
+
+        .keyphrases-content ul li {
+            display: inline-block
+        }
+
+        .keyphrases-content ul li:after {
+            content: "/";
+            padding: 0 5px;
+            color: #666
+        }
+        .keyphrases-content ul li:last-child:after {
+            content: "";
+            padding: 0 5px;
+            color: #666
+        }
+
+        .keyphrases-content ul li a {
+            color: #808080;
+            font-size: 15px
+        }
+
+        .keyphrases-content ul li a:hover {
+            text-decoration: underline
+        }
+
+        .btn-knowmore {
+            margin: 0px 0px 10px 0px;
+            border:2px solid #4f8abe;
+            background-color:#4f8abe;
+            border-radius:5px;
+            padding: 3px 20px;
+            color: #ffffff;
+            opacity: 0.9;
+        }
+        .btn-knowmore:hover {
+           opacity: 1;
+        }
+
+        .search_text {
+            background-color: #4f8abe;
+            padding: 5px 0px;
+            color: #fff;
+            position: relative;    
+        }
+        
+        .search_text a{
+            padding-left: 30px;    
+            color: #fff;
+            
+        }
+        .search_text:before{
+            font-family: FontAwesome;
+            content: "\f0da";
+            padding: 0 5px;
+            position: absolute;
+            left: 5px;
+            color: #ffffff;
+            font-size:20px;
+        }
+
+        @media screen and (max-width:599px) {
+            .border-box {
+                padding: 5px
+            }
+
+            .keyphrases-content ul li {
+                display: block;
+                padding: 5px;
+                margin-right: 20px;
+                margin-top: 5px;
+                line-height: 10px;
+                border: 1px solid #ececec;
+            }
+
+            .keyphrases-content ul li a{
+                font-size: 13px;
+                
+            }
+   
+
+            .keyphrases-content ul li:after {
+                content: "";
+                padding: 0;
+                color: #666
+            }
+        }
+    </style>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Page Header -->
+    [[Partial('/partial/_header.html')]]
+    <!-- Main Content -->
+    <div id="content" role="main">
+      <!-- Promo Section -->
+      <section class="section blackbg">
+        <div class="container-fluid">
+          <div class="row-fluid">
+            <div class="super-hero-unit">
+              <figure>
+                <picture>
+                  <source srcset="/images/bannerimages/Company.jpg" media="(min-width: 1200px)" />
+                  <source srcset="/images/bannerimages/Company.jpg" media="(max-width: 420px)" />
+                  <img src="/images/bannerimages/Company.jpg"  alt="Rugged Monitoring - Blogs / Discussions" />
+                </picture>
+                <div class="flex-caption slidertxt">
+                    <figcaption>
+                      <div class="bannerblock">
+                        <h1>
+                           WELCOME TO RUGGED MONITORING
+                        </h1>
+                     <p>Fiber optic temperature sensors for E-MOBILITY, ENERGY, MEDICAL, FOOD & BEVERAGE, INDUSTRIAL AND RESEARCH LABORATORIES</p>
+                     </div>
+                     <!-- <br>
+                     <a href="/industry-vertical/[[vertical.vid]]" class="more-link">LEARN MORE</a>-->
+                  </figcaption>
+                  </div>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+       <k-script get-api="http://api2.kitsune.tools/language/v1/ruggedmonitoring/search/{0}?websiteId=5bed49a7299c810001e423bd&searchProperty=ruggedmonitoring.products&include=name,product_summary,description.keywords,product_image.url,product_image.description,_kid&skip=0&limit=50"
+          headers="Authorization:5b30c5bc2f6e7a050ade0b13"
+          input="[[search_text]]">
+      <!-- Blog -->
+      <section class="section">
+        <div class="container-fluid">
+          <!-- Breadcrumb --> 
+          <div class="row-fluid">
+           <div class="span12">
+              <ul class="breadcrumb">
+                  <li><a href="/?v=20">Home</a> <span class="divider">&#xBB;</span></li>
+                  <li><a>Resources</a> <span class="divider">&#xBB;</span></li>
+                  <li><a>Search Results</a> <span class="divider">&#xBB;</span></li>
+                  <li class="active">[[search_text]] ([[kresult.extra.TotalCount]])</li>
+              </ul>
+           </div>
+          </div>
+          <!-- end: Breadcrumb -->
+          
+    
+          
+          <!--Category Dropdown-->
+          <!--<div class="row-fluid margin-bottom-20">
+            <div class="span12">-->
+              <!--<div class="span2" style="margin-top: 6px; font-family: 'Helvetica-Bold'; text-transform: uppercase;">View By Category :</div>-->
+             <!-- <div class="dropdown span8">  
+                <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Select Category
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu" style="border-radius: 0px" role="menu" aria-labelledby="menu1">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/blogs/1">All Categories</a></li>
+                  <li role="presentation"  k-repeat="[[vertical in ruggedmonitoring.industryverticals]]">
+                    <a role="menuitem" tabindex="-1" href="/vertical-blogs/[[vertical.vid]]">[[vertical.name]]</a>
+                  </li>
+                </ul>
+                <br/>
+                
+              </div>
+            </div>
+            <br />
+          </div>-->
+          <!-- end: Category Dropdown -->
+          
+          
+          <!-- Blog List -->
+         
+        
+         
+          <div class="row-fluid">
+              <div class="span12">
+                  <div k-repeat="[[product in kresult.data]]">
+                      <article class="post row-fluid news blog-list-item border-box">
+                        
+                          <div class="span12">
+                              <div class="">
+                                  <div class="search_text"><a href="[[View('/product-details.html').setObject(product)]]">[[product.name]]</a></div>
+                                  <div class="post-head">
+                                      <!--<h3 class="tittle-dec"><u>Description</u>:</h3>-->
+                                      
+                                  </div>
+                               </div>
+                               <div class="keyphrases-content">
+                                    <!--<h3 class="tittle-dec"><u>Related Keyphrases</u>:</h3>-->
+                                    
+                                    <p>[[product.product_summary]]</p>
+                                    
+                                    <a href="[[View('/product-details.html').setObject(product)]]"><button class="btn-knowmore">Know More...</button></a>
+                                    
+                                    <ul k-repeat="[[keyword in product.description.keywords]]">
+                                        <li><a title="Know more about [[keyword]]" href="/search/[[keyword.urlencode()]]">[[keyword]]</a></li>
+                                        <!--<li><a href="#">accurate temperature readings</a></li>-->
+                                        <!--<li><a href="#">operator invaluable information</a></li>-->
+                                        <!--<li><a href="#">allow complete oil penetration</a></li>-->
+                                        <!--<li><a href="#">temperature measurements</a></li>-->
+                                        <!--<li><a href="#">transformer manufacturer</a></li>-->
+                                        <!--<li><a href="#">high dielectric strength</a></li>-->
+                                        <!--<li><a href="#">transformer components</a></li>-->
+                                        <!--<li><a href="#">first quality materials</a></li>-->
+                                        <!--<li><a href="#">Monitoring Tsens probes</a></li>-->
+                                        <!--<li><a href="#">factory heatrun tests</a></li>-->
+                                        <!--<li><a href="#">direct measurements</a></li>-->
+                                        <!--<li><a href="#">probe construction</a></li>-->
+                                        <!--<li><a href="#">tip construction</a></li>-->
+                                        <!--<li><a href="#">GaAs technology</a></li>-->
+                                    </ul>
+                                   
+                                
+                                  
+                                </div>
+                              
+                          </div>
+                      </article>
+                     
+                  </div>
+                  <div class="row-fluid">
+                      <div class="span8 offset2">
+                          <nav class="post-navigation blog-pagination" id="nav-below">
+                              <ul class="pager">
+                                  <li class="previous disabled"><a class="news-prev" href="#" rel="prev"><i class="icon-angle-left"></i></a></li>
+                                  <li class="pagination-numbers center-align">
+                                      <ul class="number-list" id="pagination-numbers"></ul>
+                                  </li>
+                                  <li class="news-next next disabled"><a href="#" rel="next"><i class="icon-angle-right"></i></a></li>
+                              </ul>
+                          </nav>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+          
+         
+        </div>
+      </section>
+      </k-script>
+         <!--Latest news-->
+     <!-- [[Partial('/partial/_latestNews.html')]]-->
+      [[Partial('/partial/_footer2.html')]]
+    </div>
+  </div>
+  <!-- Page Footer -->
+
+  <script src="javascripts/jquery.min.js" type="text/javascript"></script>
+  <script src="javascripts/bootstrap.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.flexslider-min.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.tweet.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.fancybox-media.js" type="text/javascript"></script>
+  <script src="javascripts/script.js" type="text/javascript"></script>
+  <script src="/javascripts/moment.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    var paginationNum = Math.ceil([[ruggedmonitoring.blogs.length()/5]]);
+    var blogURL = "/blogs/";
+    var linkURL = '';
+    var pageNo = '';
+    var listItem = '';
+    
+    for (i = 1; i <= paginationNum; i++){
+    	
+      pageNo = i;
+    	linkURL = blogURL + i;
+      listItem = "<li class='number-list-item'><a href=" + linkURL + "><span class='tab'>" + pageNo + "</span></a></li>";
+      $("#pagination-numbers").append(listItem);
+    }
+    
+    $(document).ready(function(){
+      var url = window.location.href;
+      var lastChar = url.charAt(url.length - 1); 
+      $("#pagination-numbers li:nth-child(" + lastChar + ")").addClass("active");
+    });
+  </script>>
+
+</body>
+</html>

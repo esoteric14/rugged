@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--[if IE 8 ]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if (gt IE 8)]><!--> <!--<![endif]-->
+<head k-dl="/solutions"> 
+  <!--SEO Meta-->
+  <meta name="description" content="Solutions - [[ruggedmonitoring.business_details.business_name]] in Québec"/>
+  
+  <meta name="keywords" content="[[ruggedmonitoring.business_details.custom_keywords]]">
+  <!--twitter-->
+  <!--<meta name="twitter:image" content="[[solution.image.url]]">-->
+  <meta name="twitter:description" content="Customer application solutions that provide unique differentiation using fiber optic temperature sensors in E-mobility, Medical, Energy and other industry verticals">
+  <meta name="twitter:title" content="Solutions - [[ruggedmonitoring.business_details.business_name]]">
+  <meta name="twitter:card" content="summary">
+  <!--facebook-->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Solutions - [[ruggedmonitoring.business_details.business_name]]">
+  <meta property="og:url" content="[[ruggedmonitoring.rootaliasurl.url]]/solutions">
+  <!--<meta property="og:image" content="[[solution.image.url]]">-->
+  <meta property="og:site_name" content="[[ruggedmonitoring.business_details.business_name]]">
+  <meta property="og:description" content="[[ruggedmonitoring.business_details.business_name]] - Customer application solutions that provide unique differentiation using fiber optic temperature sensors in E-mobility, Medical, Energy and other industry verticals">
+  
+  
+  <title>Solutions - Rugged  Monitoring</title>
+  
+  [[Partial('/partial/_commonHEAD.html')]]
+  [[Partial('/partial/_schemaLocalBusiness.html')]]
+</head>
+<body>
+  <div class="wrapper" >
+    <!-- Page Header -->
+    [[Partial('/partial/_header.html')]]
+    <!-- Main Content -->
+    <div id="content" role="main">
+        <!-- Promo Section -->
+       <section class="section blackbg">
+        <div class="container-fluid">
+           <div class="row-fluid">
+            <div class="super-hero-unit">
+              <figure>
+                 <picture>
+                  <source srcset="/images/bannerimages/Solution.jpg" media="(min-width: 1200px)" />
+                  <source srcset="/images/bannerimages/Solution-mobile.jpg" media="(max-width: 420px)" />
+                  <img src="/images/bannerimages/Solution.jpg"  alt="Rugged Monitoring Solutions" />
+                </picture>
+               
+                  <div class="flex-caption slidertxt">
+                    <figcaption >
+                        <div class="bannerblock">
+                          <h1>
+                            Solutions
+                          </h1>
+                           <p>Customer application solutions that provide unique differentiation using fiber optic temperature sensors in E-mobility, Medical, Energy and other industry verticals</p>
+                       </div>
+                       <!-- <br>
+                       <a href="/industry-vertical/[[vertical.vid]]" class="more-link">LEARN MORE</a>-->
+                    </figcaption>
+                  </div>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section-alt section-padded">
+          <div class="container-fluid">
+            <!--breadcrumb-->
+            <div class="row-fluid">
+             <div class="span12">
+                <ul class="breadcrumb">
+                  <li><a href="/">Home</a> <span class="divider">»</span></li>
+                  <li class="active">Solutions</li>
+                </ul>
+             </div>
+            </div>
+            <div class="row-fluid main-text-row">
+              <div class="span12">
+                <p>[[ruggedmonitoring.business_details.solutions_description]]</p>
+              </div>
+            </div>
+            <div class="row-fluid">
+              <div class="span12">
+              <!-- start: Solutions Accordion -->
+              <div class="accordion" id="accordion" k-repeat="[[ruggedmonitoring.industryverticals, i, 0:ruggedmonitoring.industryverticals.length()]]">
+                <div style="display:none;" class="accordion-group" k-show="[[i == 0]]">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle"  data-toggle="collapse"  href="#collapse[[i]]">
+                      [[ruggedmonitoring.industryverticals[i].name]]
+                    </a>
+                  </div>
+                  <div class="accordion-body in collapse" id="collapse[[i]]" style="height: auto;">
+                    <div class="accordion-inner">
+                      <div k-repeat="[[solution in ruggedmonitoring.solutions]]">
+                        <div k-show="[[solution.industry_verticals.indexof(ruggedmonitoring.industryverticals[i].vid) >= 0]]" class="list_link" style="margin-bottom:0px;">
+                          <p>
+                            <a class="link-class"  title="[[solution.name]]" href="[[View('/solutions-details.html').setobject(solution)]]">[[solution.name]]</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div style="display:none;" class="accordion-group" k-show="[[i != 0]]">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle collapsed"  data-toggle="collapse" href="#collapse[[i]]">
+                      [[ruggedmonitoring.industryverticals[i].name]]
+                    </a>
+                  </div>
+                  <div class="accordion-body collapse" id="collapse[[i]]" style="height: 0px;">
+                    <div class="accordion-inner">
+                      <div k-repeat="[[solution in ruggedmonitoring.solutions]]">
+                        <div k-show="[[solution.industry_verticals.indexof(ruggedmonitoring.industryverticals[i].vid) >= 0]]" class="list_link" style="margin-bottom:0px;">
+                          
+                          <p>
+                            <a class="link-class"  title="[[solution.name]]" href="[[View('/solutions-details.html').setobject(solution)]]">[[solution.name]]</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end: Solutions Accordion -->
+            </div>
+            </div>
+           </div>
+        </section>
+        
+        
+        
+        <!-- start: Related Product Categories -->
+        <section class="section spec-section">
+          <div class="container-fluid">
+            <div class="row-fluid">
+              <div class="section-header">
+                <h1>
+                  Related
+                  <small class="light">Product Categories</small>
+                </h1>
+              </div>
+               <ul class="thumbnails portfolio" k-repeat="[[ruggedmonitoring.product_categories, i, 0:4]]">
+                <li class="span3 filter-lake">
+                  <figure class="round-box box-huge no-rounded">
+                    <a class="box-inner fancybox-media" href="/product-category/[[ruggedmonitoring.product_categories[i].pcid]]" title="[[ruggedmonitoring.product_categories[i].name]]" rel="group">
+                      <img class="portfolioimg" alt="[[ruggedmonitoring.product_categories[i].tile_image.url]]" src="[[ruggedmonitoring.product_categories[i].tile_image.url]]">
+                    </a>
+                    <figcaption>
+                      <h4>
+                        <a class="portfolio-title" href="/product-category/[[ruggedmonitoring.product_categories[i].pcid]]" title="[[ruggedmonitoring.product_categories[i].name]]">
+                        [[ruggedmonitoring.product_categories[i].name]]
+                        </a>
+                      </h4>
+                     
+                       <p>
+                          [[ruggedmonitoring.product_categories[i].short_description.substr(0,200)]][[ruggedmonitoring.product_categories[i].short_description.length() > 200 ? '...' : '']]
+                      </p>
+                       <a class="more-link" href="/product-category/[[ruggedmonitoring.product_categories[i].pcid]]" title="[[ruggedmonitoring.product_categories[i].name]]">
+                        LEARN MORE
+                    </a>
+                    </figcaption>
+                  </figure>
+                   
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- end: Related Product Categories -->
+        
+        
+       
+        <!--Latest news-->
+        [[Partial('/partial/_latestNews.html')]]
+         [[Partial('/partial/_footer2.html')]]
+      </div>
+  </div>
+  <!-- Page Footer -->
+ 
+  <script src="javascripts/jquery.min.js" type="text/javascript"></script>
+  <script src="javascripts/bootstrap.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.flexslider-min.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.tweet.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.fancybox-media.js" type="text/javascript"></script>
+  <script src="javascripts/script.js" type="text/javascript"></script>
+ <script src="/javascripts/moment.min.js" type="text/javascript"></script>
+ <script>
+   var verticals = document.querySelectorAll('.accordion-group');
+   for(var i =0; i< verticals.length; i++){
+     if(verticals[i].querySelector('.list_link')){
+       verticals[i].setAttribute("style" , "")
+     }
+   }
+ </script>
+</body>
+</html>

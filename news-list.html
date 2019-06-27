@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if (gt IE 8)]><!--> 
+<html lang="en"> <!--<![endif]-->
+<head k-dl="/news/[[View('/news-list.html').currentpagenumber]]">
+  <!--SEO Meta-->
+  <meta name="description" content="[[ruggedmonitoring.business_details.business_name]] in Québec, [[ruggedmonitoring.business_details.about_ruggedmonitoring.substr(0,78)]]."/>
+  <meta name="keywords" content="[[ruggedmonitoring.business_details.custom_keywords]]">
+  <!--twitter-->
+  <meta name="twitter:image" content="[[ruggedmonitoring.business_details.home_banner.url]]">
+  <meta name="twitter:description" content="[[ruggedmonitoring.business_details.business_name]] - [[ruggedmonitoring.business_details.about_ruggedmonitoring.substr(0,230).replace('\n','')]]">
+  <meta name="twitter:title" content="Home | [[ruggedmonitoring.business_details.business_name]]">
+  <meta name="twitter:card" content="summary">
+  <!--facebook-->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Home | [[ruggedmonitoring.business_details.business_name]]">
+  <meta property="og:url" content="[[ruggedmonitoring.rootaliasurl.url]]">
+  <meta property="og:image" content="[[ruggedmonitoring.business_details.home_banner.url]]">
+  <meta property="og:site_name" content="[[ruggedmonitoring.business_details.business_name]]">
+  <meta property="og:description" content="[[ruggedmonitoring.business_details.business_name]] - [[ruggedmonitoring.business_details.about_ruggedmonitoring.substr(0,230).replace('\n','')]]">
+  
+  
+  <title>News - Rugged  Monitoring</title>
+  
+  [[Partial('/partial/_commonHEAD.html')]]
+  [[Partial('/partial/_schemaLocalBusiness.html')]]
+  <link href="stylesheets/fonts.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Page Header -->
+    [[Partial('/partial/_header.html')]]
+    <!-- Main Content -->
+    <div id="content" role="main">
+     <!-- Promo Section -->
+      <section class="section blackbg">
+        <div class="container-fluid">
+           <div class="row-fluid">
+          <div class="super-hero-unit">
+            <figure>
+                <picture>
+                  <source srcset="/images/bannerimages/News.jpg" media="(min-width: 1200px)" />
+                  <source srcset="/images/bannerimages/News-mobile.jpg" media="(max-width: 420px)" />
+                  <img src="/images/bannerimages/News.jpg"  alt="Rugged Monitoring - News" />
+                </picture>
+                <div class="flex-caption slidertxt">
+                <figcaption >
+                    <div class="bannerblock">
+                      <h1>
+                         News
+                        <span class="lighter">
+                          &amp;
+                        </span>
+                        Updates
+                      </h1>
+                   <p>Major news covering fiber optic temperature sensor industry verticals</p>
+                   </div>
+                </figcaption>
+              </div>
+            </figure>
+          </div>
+        </div>
+        </div>
+      </section>
+      <!-- News -->
+      <section class="section section-padded">
+       
+        <div class="container-fluid">
+          <div class="row-fluid">
+            <!--breadcrumb-->
+            <div class="span12">
+              <ul class="breadcrumb">
+                <li><a href="/">Home</a> <span class="divider">»</span></li>
+                <li><a>Resources</a> <span class="divider">»</span></li>
+                <li class="active">News</li>
+              </ul>
+            </div>
+          </div>
+       
+          <!--Category Dropdown-->
+          <div class="row-fluid margin-bottom-20">
+            <div class="span12">
+              <!--<div class="span2" style="margin-top: 6px; font-family: 'Helvetica-Bold'; text-transform: uppercase;">View By Category :</div>-->
+              <div class="dropdown span8">  
+                <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Select Category
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu" style="border-radius: 0px" role="menu" aria-labelledby="menu1">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="[[View('/news-list.html').geturl()]]">All Categories</a></li>
+                  <li role="presentation"  k-repeat="[[vertical in ruggedmonitoring.industryverticals]]">
+                    <a role="menuitem" title="News by vertical [[vertical.name]]" tabindex="-1" href="/vertical-news/[[vertical.vid]]">[[vertical.name]]</a>
+                  </li>
+                </ul>
+                <br/>
+                
+              </div>
+            </div>
+            <br />
+          </div>
+          <!-- end: Category Dropdown -->
+          
+          <div class="row-fluid">
+            <div class="span12">
+              <div k-repeat="[[ruggedmonitoring.news, i, View('/news-list.html').offset:5]]">
+              <article class="post row-fluid news">
+               
+                <div class="span12">
+                  <div class="list_link">
+                      <div class="news-time">
+                              <span data-date="[[ruggedmonitoring.news[i].createdon]]" style="text-transform: uppercase;">[[ruggedmonitoring.news[i].createdon]]</span><span style="text-transform: uppercase;" k-hide="[[ruggedmonitoring.news[i].source == null]]"> | [[ruggedmonitoring.news[i].source]]</span><span style="text-transform: uppercase;" > | [[ruggedmonitoring.news[i].category]]</span>
+                      </div>
+                
+                  <div class="post-head">
+                    <h3 class="small-screen-center news-header">
+                      <a target="_blank" title="[[ruggedmonitoring.news[i].public_link.description]]" href="[[ruggedmonitoring.news[i].public_link.url]]">
+                        [[ruggedmonitoring.news[i].title]]
+                      </a>
+                    </h3>
+                    <p>
+                      [[ruggedmonitoring.news[i].short_description]]
+                    </p>
+                    <!--<div class="post-extras">
+                      <i class="icon-tags"></i>
+                      <i k-repeat="[[ruggedmonitoring.blogs[i].description.keywords, k, 0 : 5]]">
+                        <a href="/k-search/[[ruggedmonitoring.blogs[i].description.keywords[k].urlencode()]]">[[ruggedmonitoring.blogs[i].description.keywords[k]]], </a>
+                      </i>
+                    </div>-->
+                  </div>
+                  <!--<figure class="post-media span5">-->
+                  <!--  <a href="[[View('/update-details.html').setobject(ruggedmonitoring.blogs[i])]]">-->
+                  <!--    <img alt="[[ruggedmonitoring.blogs[i].image.description]]" src="[[ruggedmonitoring.blogs[i].image.url]]">-->
+                  <!--  </a>-->
+                  <!--</figure>-->
+                  <!--<div class="news-desc">-->
+                  <!--  [[ruggedmonitoring.news[i].description.text.substr(0, 500)]]-->
+                 
+                  <!--</div>-->
+                   <a target="_blank" style="color:black" title="[[ruggedmonitoring.news[i].public_link.description]]" href="[[ruggedmonitoring.news[i].public_link.url]]">
+                   
+                      Read More...
+                   
+                  </a>
+                  </div>
+                
+                </div>
+              </article>
+              </div>
+               <!-- start: Pagination -->
+              <div class="row-fluid">
+                <div class="span8 offset2">
+                    <nav class="post-navigation blog-pagination" id="nav-below">
+                    <ul class="pager">
+                      <li class="previous [[View('/news-list.html').currentpagenumber <= 1 ? 'disabled' : '']]" >
+                        <a class="news-prev" href="[[View('/news-list.html').currentpagenumber <= 1 ? '#' : View('/news-list.html').previouspage.url]]" 
+                          rel="prev">
+                          <i class="icon-angle-left"></i>
+                        </a>
+                      </li>
+                      <li class="pagination-numbers center-align">
+                        
+                        <ul class="number-list" id="pagination-numbers">
+                         
+                        </ul>
+                      </li>
+                      <li  class="news-next next [[View('/news-list.html').currentpagenumber >= (ruggedmonitoring.news.length() / 5) ? 'disabled' : '']]">
+                        <a href="[[View('/news-list.html').currentpagenumber >= (ruggedmonitoring.news.length() / 5) ? '#' : View('/news-list.html').nextpage.url]]" rel="next" >
+                          <i class="icon-angle-right"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <!-- end: Pagination -->
+              
+            </div>
+          </div>
+        </div>
+      </section>
+        <!--Latest news-->
+        [[Partial('/partial/_latestNews.html')]]
+        [[Partial('/partial/_footer2.html')]]
+    </div>
+  </div>
+  <!-- Page Footer -->
+ 
+  <script src="javascripts/jquery.min.js" type="text/javascript"></script>
+  <script src="javascripts/bootstrap.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.flexslider-min.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.tweet.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.fancybox-media.js" type="text/javascript"></script>
+  <script src="javascripts/script.js" type="text/javascript"></script>
+  <script src="/javascripts/moment.min.js" type="text/javascript"></script>
+ <!--pagination-->
+<script type="text/javascript">
+    var paginationNum = Math.ceil([[ruggedmonitoring.news.length()/5]]);
+    var newsURL = "/news/";
+    var linkURL = '';
+    var pageNo = '';
+    var listItem = '';
+    
+    for (i = 1; i <= paginationNum; i++){
+    	
+      pageNo = i;
+    	linkURL = newsURL + i;
+      listItem = "<li class='number-list-item'><a href=" + linkURL + "><span class='tab'>" + pageNo + "</span></a></li>";
+      $("#pagination-numbers").append(listItem);
+    }
+    
+    $(document).ready(function(){
+      var url = window.location.href;
+      var lastChar = url.charAt(url.length - 1); 
+      $("#pagination-numbers li:nth-child(" + lastChar + ")").addClass("active");
+    });
+  </script>
+</body>
+</html>

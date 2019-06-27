@@ -1,0 +1,30 @@
+{
+  "build": {
+    "seo.footer": false,
+    "seo.header": false,
+    "cleanBuild": false
+  },
+  "payments": {
+    "preview": [
+      {
+        "domain": "example.com",
+        "gateway": "instamojo",
+        "salt": "SALT",
+        "api_key": "API_KEY",
+        "api_secret": "API_SECRET",
+        "redirect_path": "/transaction_status",
+        "api_url": "https://test.instamojo.com/api/1.1"
+      }
+    ],
+    "live": [
+      {
+        "domain": "example.com",
+        "gateway": "instamojo",
+        "salt": "SALT",
+        "api_key": "API_KEY",
+        "api_secret": "API_SECRET",
+        "redirect_path": "/transaction_status"
+      }
+    ]
+  }
+}

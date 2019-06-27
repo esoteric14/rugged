@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if (gt IE 8)]><!--> 
+<html lang="en"> <!--<![endif]-->
+<head>
+  <!--SEO Meta-->
+  <meta name="description" content=" [[ruggedmonitoring.home_page_meta.meta_description]]"/>
+  <meta name="keywords" content="[[ruggedmonitoring.home_page_meta.meta_keywords]]">
+  <!--twitter-->
+  <meta name="twitter:image" content="[[ruggedmonitoring.business_details.home_banner.url]]">
+  <meta name="twitter:description" content="[[ruggedmonitoring.business_details.business_name]] - [[ruggedmonitoring.business_details.about_ruggedmonitoring.substr(0,230).replace('\n','')]]">
+  <meta name="twitter:title" content="Home | [[ruggedmonitoring.business_details.business_name]]">
+  <meta name="twitter:card" content="summary">
+  <!--facebook-->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Home | [[ruggedmonitoring.home_page_meta.meta_title]]">
+  <meta property="og:url" content="[[ruggedmonitoring.rootaliasurl.url]]">
+  <meta property="og:image" content="[[ruggedmonitoring.business_details.home_banner.url]]">
+  <meta property="og:site_name" content="[[ruggedmonitoring.business_details.business_name]]">
+  <meta property="og:description" content=" [[ruggedmonitoring.home_page_meta.meta_description]]">
+  
+  <title>[[ruggedmonitoring.home_page_meta.meta_title]]</title>
+  
+  [[Partial('/partial/_commonHEAD.html')]]
+  [[Partial('/partial/_schemaLocalBusiness.html')]]
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Page Header -->
+    [[Partial('/partial/_header.html')]]
+    <!-- Main Content -->
+    <div id="content" role="main">
+      <!-- Promo Section -->
+      <section class="section blackbg">
+        <div class="container-fluid">
+          <!--show default banner until slider load content-->
+          <!--<div class="row-fluid" id="basic-banner">-->
+          <!--  <div class="super-hero-unit">-->
+          <!--  <figure>-->
+          <!--    <picture>-->
+          <!--        <source srcset="/images/bannerimages/Company.jpg" media="(min-width: 1200px)" />-->
+          <!--        <source srcset="/images/bannerimages/Company_mobile.jpg" media="(max-width: 420px)" />-->
+          <!--        <img src="/images/bannerimages/Company.jpg"  alt="[[ruggedmonitoring.business_details.business_name]]" />-->
+          <!--      </picture>-->
+                
+          <!--  </figure>-->
+          <!--</div>-->
+          <!--</div>-->
+          <div class="row-fluid" id="flexslider-row">
+          <div class="flexslider" data-flex-animation="slide" data-flex-controlsalign="center" data-flex-controlsposition="inside" data-flex-directions="hide" data-flex-speed="8000" id="intro">
+            <ul class="slides" k-repeat="[[vertical in ruggedmonitoring.industryverticals ]]"> 
+              <li k-norepeat>
+                <div class="super-hero-unit">
+                  <figure>
+                     <picture>
+                      <source srcset="/images/bannerimages/Company.jpg 1250w" media="(min-width: 1200px)" />
+                      <source srcset="/images/bannerimages/Company_mobile.jpg" media="(max-width: 420px)" />
+                      <img src="[[vertical.banner_image.url]]"  alt="[[ruggedmonitoring.business_details.business_name]]"/>
+                    </picture>
+                    <!--<img alt="[[ruggedmonitoring.business_details.business_name]]"-->
+                    <!-- srcset="/images/bannerimages/Company_mobile.jpg 335w,-->
+                    <!--          /images/bannerimages/Company.jpg 1250w"-->
+                    <!--  sizes="(max-width: 440px) 335vw,-->
+                    <!--          (min-width: 800) 1250vw"-->
+                    <!--  src="/images/bannerimages/Company.jpg">-->
+                    <div class="flex-caption">
+                      <figcaption >
+                          <div class="bannerblock">
+                            <h1>
+                            Welcome to [[ruggedmonitoring.business_details.business_name]]
+                            </h1>
+                            <p >Fiber optic temperature sensors for E-MOBILITY, ENERGY, MEDICAL, FOOD & BEVERAGE, INDUSTRIAL AND RESEARCH LABORATORIES </p>
+                            <br>
+                         </div>
+                          <br>
+                         <a href="[[View('/about.html').getUrl()]]" class="more-link">LEARN MORE</a>
+                      </figcaption>
+                    </div>
+                  </figure>
+                </div>
+              </li>
+              <li>
+                <div class="super-hero-unit">
+                  <figure>
+                    <picture>
+                      <source srcset="[[vertical.banner_image.url]]" media="(min-width: 1200px)" />
+                      <source srcset="[[vertical.mobile_banner_image.url]]" media="(max-width: 420px)" />
+                      <img src="[[vertical.banner_image.url]]"  alt="[[vertical.banner_image.description]]" />
+                    </picture>
+                    <!--<img alt="[[vertical.banner_image.description]]" -->
+                    <!--  srcset="[[vertical.mobile_banner_image.url]] 335w,-->
+                    <!--          [[vertical.banner_image.url]] 1250w"-->
+                    <!--  sizes="(max-width: 440px) 335vw,-->
+                    <!--          (min-width: 800) 1250vw"-->
+                    <!--  src="[[vertical.banner_image.url]]">-->
+                    <div class="flex-caption">
+                      <figcaption >
+                          <div class="bannerblock">
+                            <h1>
+                              [[vertical.name]]
+                            </h1>
+                            <p>[[vertical.short_description]]</p>
+                            <br>
+                         </div>
+                          <br>
+                         <a href="/industry-vertical/[[vertical.vid]]" class="more-link">LEARN MORE</a>
+                      </figcaption>
+                    </div>
+                  </figure>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        </div>
+       
+      </section>
+      <!-- Our Categories -->
+      <section class="section spec-section" >
+        <div class="container-fluid">
+          <div class="row-fluid">
+            <div class="section-header">
+              <h1>
+                Verticals
+                <small class="light">Served</small>
+              </h1>
+            </div>
+           
+                      <ul class="thumbnails portfolio" k-repeat="[[ruggedmonitoring.industryverticals, i, 0:4 ]]">
+              <li class="span3">
+                <figure class="round-box box-huge no-rounded">
+                  <a class="box-inner fancybox-media" href="/industry-vertical/[[ruggedmonitoring.industryverticals[i].vid]]"  title="[[ruggedmonitoring.industryverticals[i].name]]" rel="group" >
+                    <img  class="portfolioimg" alt="[[ruggedmonitoring.industryverticals[i].tile_image.description]]"  src="[[ruggedmonitoring.industryverticals[i].tile_image.url]]">
+                
+                  </a>
+                  <figcaption>
+                    <h4>
+                      <a k-pay-amout="100" k-pay-description="test" class="portfolio-title" href="/industry-vertical/[[ruggedmonitoring.industryverticals[i].vid]]">
+                      [[ruggedmonitoring.industryverticals[i].name]]
+                      </a>
+                    </h4>
+                     <p>
+                        [[ruggedmonitoring.industryverticals[i].short_description.substr(0,200)]][[ruggedmonitoring.industryverticals[i].short_description.length() > 200 ? '...' : '']]
+                    </p>
+                     <a class="more-link" href="/industry-vertical/[[ruggedmonitoring.industryverticals[i].vid]]">
+                    LEARN MORE
+                  </a>
+                  </figcaption>
+                </figure>
+              </li>
+            </ul>
+            </div>
+         
+        </div>
+      </section>
+      <!-- Our work -->
+         <section class="section" >
+         <div class="container-fluid">
+          <div class="row-fluid">
+               <div class="section-header">
+              <h1>
+                Why
+                <small class="light">Rugged Monitoring?</small>
+              </h1>
+            </div>
+            </div>
+           </div>
+           </section>
+           <section class="section blackbg">
+              <div class="container-fluid">
+                <div class="row-fluid">
+                  <video   width="100%" autoplay loop>
+                    <source src="/images/bannerimages/GIF_R01.mp4" type="video/mp4">
+                  </video>
+          <!--  <img src="[[ruggedmonitoring.business_details.details_gif.url]]" -->
+          <!--alt="[[ruggedmonitoring.business_details.details_gif.description]]" >-->
+          </div>
+                 </div>
+          </section>
+          
+         
+    <!--  <section class="section section-alt section-padded">
+        <div class="row">
+          <div class="section-header">
+            <h1>
+              Why
+              <small class="light">Rugged Monitoring?</small>
+            </h1>
+          </div>
+          <div class="row-fluid">
+          <img width="100%" src="[[ruggedmonitoring.business_details.details_gif.url]]" 
+          alt="[[ruggedmonitoring.business_details.details_gif.description]]" >
+          </div>
+        </div>
+      </section>-->
+      <!-- Our Products -->
+      <section class="section spec-section">
+        <div class="container-fluid">
+          <div class="row-fluid">
+            <div class="section-header">
+              <h1>
+                Our
+                <small class="light">Products</small>
+              </h1>
+            </div>
+             <ul class="thumbnails portfolio" k-repeat="[[ruggedmonitoring.product_categories, i, 0:4]]">
+              <li class="span3 filter-lake">
+                <figure class="round-box box-huge no-rounded">
+                  <a class="box-inner fancybox-media" href="/product-category/[[ruggedmonitoring.product_categories[i].pcid]]" title="[[ruggedmonitoring.product_categories[i].name]]" rel="group">
+                    <img class="portfolioimg" alt="[[ruggedmonitoring.product_categories[i].tile_image.url]]" src="[[ruggedmonitoring.product_categories[i].tile_image.url]]">
+                
+                  </a>
+                  <figcaption>
+                    <h4>
+                      <a class="portfolio-title" href="/product-category/[[ruggedmonitoring.product_categories[i].pcid]]" title="[[ruggedmonitoring.product_categories[i].name]]">
+                      [[ruggedmonitoring.product_categories[i].name]]
+                      </a>
+                    </h4>
+                     <p>
+                        [[ruggedmonitoring.product_categories[i].short_description.substr(0,200)]][[ruggedmonitoring.product_categories[i].short_description.length() > 200 ? '...' : '']]
+                    </p>
+                     <a class="more-link" href="/product-category/[[ruggedmonitoring.product_categories[i].pcid]]" title="[[ruggedmonitoring.product_categories[i].name]]">
+                    LEARN MORE
+                  </a>
+                  </figcaption>
+                </figure>
+              </li>
+            </ul>
+            <!--<div class="flexslider fadein-links" -->
+            <!--    data-flex-animation="slide" -->
+            <!--    data-flex-controls="hide" -->
+            <!--    data-flex-directions-position="outside" -->
+            <!--    data-flex-directions-type="fancy" -->
+            <!--    data-flex-itemwidth="300" -->
+            <!--    data-flex-slideshow="false" -->
+            <!--    id="categories">-->
+            <!--  <ul class="unstyled row-fluid slides" k-repeat="[[ruggedmonitoring.product_categories, i, 0:ruggedmonitoring.product_categories.length()]]">-->
+            <!--    <li>-->
+            <!--      <div class="round-box box-huge no-rounded">-->
+            <!--        <a href="/product-category/[[ruggedmonitoring.product_categories[i].pcid]]">-->
+            <!--          <span class="box-inner">-->
+            <!--            <img alt="[[ruggedmonitoring.product_categories[i].tile_image.description]]" class="img-circle" src="[[ruggedmonitoring.product_categories[i].tile_image.url]]">-->
+            <!--           </span>-->
+            <!--        </a>-->
+            <!--        <a href="/product-category/[[ruggedmonitoring.product_categories[i].pcid]]">-->
+            <!--        <h3 class="text-center">-->
+            <!--          [[ruggedmonitoring.product_categories[i].name]]-->
+            <!--        </h3>-->
+            <!--        <p>-->
+            <!--            [[ruggedmonitoring.product_categories[i].short_description]]-->
+            <!--        </p>-->
+            <!--      </a>-->
+            <!--      <a class="more-link" href="/product-category/[[ruggedmonitoring.product_categories[i].pcid]]">-->
+            <!--       LEARN MORE-->
+            <!--      </a>-->
+            <!--      </div>-->
+                  
+            <!--    </li>-->
+            <!--  </ul>-->
+            <!--</div>-->
+          </div>
+        </div>
+      </section>
+      <!--new product-->
+       <section class="section sec-spacer blackbg" >
+          <div class="container-fluid">
+          <div class="row-fluid">
+           <div class="span6">
+              <div class="flexslider" data-flex-directions="hide" data-flex-speed="10000" id="work">
+                <ul class="slides">
+                  <li>
+                    <img  alt="[[ruggedmonitoring.business_details.solutions_banner.description]]" src="[[ruggedmonitoring.business_details.solutions_banner.url]]">
+                  </li>
+                  <!-- <li>
+                    <img alt="some image" src="images/assets/devices/macbook.png">
+                  </li>
+                  <li>
+                    <img alt="some image" src="images/assets/devices/ipad.png">
+                  </li> -->
+                </ul>
+              </div>
+            </div>
+            <div class="span6">
+                <div class="pr-30-md content sec-spacer">
+                  <div class="section-heading">
+                    <h2 class="color-theme marginzero whitetext spec-header">[[ruggedmonitoring.business_details.solutions_title]]</h2>
+                  </div>
+                  <div class="section-heading-line-left"></div>
+                  <div class="mt-20 text-content-big"><p class="sec-spacer whitetext spec-text">[[ruggedmonitoring.business_details.solutions_description]]</p>
+                  </div>
+                  <div class="mt-20" >
+                    <a class="more-link" href="[[View('/solutions.html').geturl()]]" title="Rugged Monitoring Solutions">LEARN MORE</a>
+                  </div>
+                </div>
+            </div>
+          </div>  
+          </div>
+      </section>
+        <!--Latest news-->
+      [[Partial('/partial/_latestNews.html')]]
+      <!-- Our Clients -->
+      <!--<section class="section section-alt section-padded">-->
+      <!--  <div class="container-fluid">-->
+      <!--    <div class="section-header">-->
+      <!--      <h1>-->
+      <!--        Clients-->
+      <!--        <small class="light">We Love</small>-->
+      <!--      </h1>-->
+      <!--    </div>-->
+      <!--    <div class="flexslider fadein-links" -->
+      <!--          data-flex-animation="slide" -->
+      <!--          data-flex-controls="hide" -->
+      <!--          data-flex-directions-position="outside" -->
+      <!--          data-flex-directions-type="fancy" -->
+      <!--          data-flex-itemwidth="250" -->
+      <!--          data-flex-slideshow="false" -->
+      <!--          id="client">-->
+      <!--      <ul class="slides">-->
+      <!--        <li>-->
+      <!--          <a href="#">-->
+      <!--            <img alt="client" src="images/assets/clients/client1.png">-->
+      <!--          </a>-->
+      <!--        </li>-->
+      <!--        <li>-->
+      <!--          <a href="#">-->
+      <!--            <img alt="client" src="images/assets/clients/client2.png">-->
+      <!--          </a>-->
+      <!--        </li>-->
+      <!--        <li>-->
+      <!--          <a href="#">-->
+      <!--            <img alt="client" src="images/assets/clients/client3.png">-->
+      <!--          </a>-->
+      <!--        </li>-->
+      <!--        <li>-->
+      <!--          <a href="#">-->
+      <!--            <img alt="client" src="images/assets/clients/client4.png">-->
+      <!--          </a>-->
+      <!--        </li>-->
+      <!--        <li>-->
+      <!--          <a href="#">-->
+      <!--            <img alt="client" src="images/assets/clients/client5.png">-->
+      <!--          </a>-->
+      <!--        </li>-->
+      <!--        <li>-->
+      <!--          <a href="#">-->
+      <!--            <img alt="client" src="images/assets/clients/client6.png">-->
+      <!--          </a>-->
+      <!--        </li>-->
+      <!--        <li>-->
+      <!--          <a href="#">-->
+      <!--            <img alt="client" src="images/assets/clients/client7.png">-->
+      <!--          </a>-->
+      <!--        </li>-->
+      <!--        <li>-->
+      <!--          <a href="#">-->
+      <!--            <img alt="client" src="images/assets/clients/client1.png">-->
+      <!--          </a>-->
+      <!--        </li>-->
+      <!--        <li>-->
+      <!--          <a href="#">-->
+      <!--            <img alt="client" src="images/assets/clients/client2.png">-->
+      <!--          </a>-->
+      <!--        </li>-->
+      <!--        <li>-->
+      <!--          <a href="#">-->
+      <!--            <img alt="client" src="images/assets/clients/client3.png">-->
+      <!--          </a>-->
+      <!--        </li>-->
+      <!--      </ul>-->
+      <!--    </div>-->
+      <!--  </div>-->
+      <!--</section>-->
+     [[Partial('/partial/_footer2.html')]]
+    </div>
+  </div>
+  <!-- Page Footer -->
+  
+  <script src="javascripts/jquery.min.js" type="text/javascript"></script>
+  <script src="javascripts/bootstrap.js" type="text/javascript"></script>
+  <script async defer src="javascripts/jquery.flexslider-min.js" type="text/javascript"></script>
+  <script async defer src="javascripts/jquery.tweet.js" type="text/javascript"></script>
+  <script async defer src="javascripts/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <script async defer src="javascripts/jquery.fancybox-media.js" type="text/javascript"></script>
+  <script src="javascripts/script.js" type="text/javascript"></script>
+  <script async defer src="/javascripts/moment.min.js" type="text/javascript"></script>
+  
+</body>
+</html>
+  

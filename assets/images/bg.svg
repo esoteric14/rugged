@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1919px" height="1017px" viewBox="0 0 1919 1017" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Background</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="3.061617e-15%" y1="50%" x2="97.2357302%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#4EFFDF" offset="0%"></stop>
+            <stop stop-color="#49BEDE" offset="51.2695312%"></stop>
+            <stop stop-color="#F47EC6" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#F06428" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-3" x="0" y="0" width="1927" height="1019"></rect>
+    </defs>
+    <g id="Top-header-&amp;-side-bar-5-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(0.000000, -63.000000)">
+        <g id="Background" transform="translate(-8.000000, 63.000000)">
+            <mask id="mask-4" fill="white">
+                <use xlink:href="#path-3"></use>
+            </mask>
+            <use id="Content" fill="url(#linearGradient-2)" xlink:href="#path-3"></use>
+            <g id="Group" mask="url(#mask-4)">
+                <g transform="translate(-292.000000, 334.000000)">
+                    <ellipse id="Oval" fill-opacity="0.9" fill="#FFFFFF" fill-rule="evenodd" opacity="0.200000003" cx="1039" cy="796" rx="1021" ry="351"></ellipse>
+                    <path d="M498.125,534.186801 C498.125,534.186801 966.268332,320.947092 1510.125,494.686801 C2053.98167,668.42651 2333.625,608.186801 2401.625,534.186801 C2469.625,460.186801 2367.625,209.686801 2367.625,209.686801 L529.625,209.686801 L498.125,534.186801 Z" id="Path-3" fill="none" opacity="0.200000003" transform="translate(1461.562500, 408.593401) rotate(-180.000000) translate(-1461.562500, -408.593401) "></path>
+                    <path d="M128.043056,1040.79472 C128.043056,1040.79472 715.5,872.534429 1259.31949,1040.79472 C1803.13898,1209.05501 2402.45734,904.644113 2402.45734,904.644113 L2514,335.034429 L0,346.148764 L128.043056,1040.79472 Z" id="Path-3" fill-opacity="0.800000012" fill="#FFFFFF" fill-rule="evenodd" opacity="0.200000003" transform="translate(1257.000000, 713.267215) rotate(-180.000000) translate(-1257.000000, -713.267215) "></path>
+                    <path d="M207.90625,821 C207.90625,821 423.767423,92.375 1260,376.78125 C2096.23258,661.1875 2219,253.612016 2219,253.612016 L2219,14.9352763 L165.620363,0.515625 L207.90625,821 Z" id="Path-3" fill-opacity="0.8" fill="#FFFFFF" fill-rule="evenodd" opacity="0.200000003" transform="translate(1192.310182, 410.757812) scale(-1, 1) rotate(-180.000000) translate(-1192.310182, -410.757812) "></path>
+                    <path d="M128.043056,803.465571 C128.043056,803.465571 761.414886,164.769934 1305.23438,333.030226 C1849.05386,501.290517 2402.45734,667.314964 2402.45734,667.314964 L2514,97.7052797 L0,108.819615 L128.043056,803.465571 Z" id="Path-3" fill-opacity="0.015" fill="#FFFFFF" fill-rule="evenodd" transform="translate(1257.000000, 450.585425) rotate(-180.000000) translate(-1257.000000, -450.585425) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

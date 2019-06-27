@@ -1,0 +1,109 @@
+
+
+ <div class="topbar">
+    <div class="container-fluid">
+      <div class="col-lg-12">
+        <!--Google Translate-->
+        <div class="pull-left" id="google_translate_element"></div>
+        <p class="visible-phone text-center" style="margin-bottom:0"> <a  title="Call US" href="tel:+1-418-767-0111"><i class="fa fa-phone"></i> Call US: +1-418-767-0111</a></p>
+        <ul class="list-inline pull-right hidden-phone">
+          <li style="margin-right: 15px;">
+            <a  title="Call US" href="tel:+1-418-767-0111"><i class="fa fa-phone"></i> Call US: +1-418-767-0111</a>									
+          </li>
+          <li class="hidden-phone">
+             <a  title="Call US"  href="mailto:info@ruggedmonitoring.com"><i class="fa fa-email"></i> Email US: info@ruggedmonitoring.com</a>									
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<header id="masthead" k-partial>
+    <nav class="navbar navbar-static-top">
+        <div class="navbar-inner">
+          <div class="container-fluid">
+            <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+            <h1 class="brand" >
+              <a href="index.html" >
+                <img style="width:230px" id="ruggedmonitoring_logo" src="images/logo.jpg"></a>
+            </h1>
+            <div class="header-login-box" id="user_welcome">
+                <ul class="header-login-links inline-block list-style-none f-right">
+                  
+                  <li><a id="loginurl" href="[[View('/sign-in.html').getUrl()]]">Customer Login </a></li> 
+                  <li class="separator"> | </li>
+                  <li><a href="[[View('/sign-up.html').getUrl()]]">Signup </a></li>
+              </ul>
+            </div>
+            <div class="nav-collapse collapse">
+             
+              <ul class="nav pull-right">
+                <li class=""><a href="./">Home</a></li>
+              
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Products</a>
+                  <ul class="dropdown-menu" k-repeat="[[category in ruggedmonitoring.product_categories]]">
+                    <li>
+                      <a href="/product-category/[[category.pcid]]">[[category.name]]</a>
+                    </li>
+                   </ul>
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Industry</a>
+                  <ul class="dropdown-menu" k-repeat="[[industry in ruggedmonitoring.industryverticals]]">
+                    <li>
+                      <a href="/industry-vertical/[[industry.vid]]">[[industry.name]]</a>
+                    </li>
+                    
+                  </ul>
+                </li>
+                <li class="dropdown">
+                 <a cla  ss="dropdown-toggle" href="[[View('/solutions.html').geturl()]]">Solutions</a>
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Resources</a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="[[View('/news-list.html').geturl()]]">News</a>
+                    </li>
+                    <li>
+                      <a href="[[View('/events-list.html').geturl()]]">Events</a>
+                    </li>
+                    <li>
+                      <a href="[[View('/updates-list.html').geturl()]]">Blogs / Discussions</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-toggle" href="[[View('/downloads.html').geturl()]]">Downloads</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-toggle" href="[[View('/app-notes.html').geturl()]]">Application Notes</a>
+                    </li>
+                  </ul> 
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Company</a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="[[View('/about.html').geturl()]]">About Us</a>
+                    </li>
+                    <li class="">
+                      <a href="[[View('/contact.html').geturl()]]">Contact Us</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <div class="search-container">
+                    <input type="text" placeholder="Search.." onkeyup="searchKeyUp()" id="searchbox" name="search">
+                    <button type="button" id="searchbutton" onclick="search()"><i class="icon-search"></i></button>
+                  </div>
+                </li>
+              </ul>
+             
+            </div>
+          </div>
+        </div>
+      </nav>
+</header>

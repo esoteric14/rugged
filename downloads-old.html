@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if (gt IE 8)]><!--> 
+<html lang="en"> <!--<![endif]-->
+<head k-dl="/downloads-old">
+    <!--SEO Meta-->
+  <meta name="description" content="[[ruggedmonitoring.business_details.business_name]] in Québec, [[ruggedmonitoring.business_details.about_ruggedmonitoring.substr(0,78)]]."/>
+  <meta name="keywords" content="[[ruggedmonitoring.business_details.custom_keywords]]">
+  <!--twitter-->
+  <meta name="twitter:image" content="[[ruggedmonitoring.business_details.home_banner.url]]">
+  <meta name="twitter:description" content="[[ruggedmonitoring.business_details.business_name]] - [[ruggedmonitoring.business_details.about_ruggedmonitoring.substr(0,230).replace('\n','')]]">
+  <meta name="twitter:title" content="Home | [[ruggedmonitoring.business_details.business_name]]">
+  <meta name="twitter:card" content="summary">
+  <!--facebook-->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Home | [[ruggedmonitoring.business_details.business_name]]">
+  <meta property="og:url" content="[[ruggedmonitoring.rootaliasurl.url]]">
+  <meta property="og:image" content="[[ruggedmonitoring.business_details.home_banner.url]]">
+  <meta property="og:site_name" content="[[ruggedmonitoring.business_details.business_name]]">
+  <meta property="og:description" content="[[ruggedmonitoring.business_details.business_name]] - [[ruggedmonitoring.business_details.about_ruggedmonitoring.substr(0,230).replace('\n','')]]">
+  
+  
+  <title>Downloads - Rugged  Monitoring</title>
+  
+  [[Partial('/partial/_commonHEAD.html')]]
+  [[Partial('/partial/_schemaLocalBusiness.html')]]
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Page Header -->
+    [[Partial('/partial/_header.html')]]
+    <!-- Main Content -->
+    <div id="content" role="main">
+     <!-- Promo Section -->
+     <section class="section blackbg">
+        <div class="container-fluid">
+         <div class="row-fluid">
+          <div class="super-hero-unit">
+            <figure>
+              <picture>
+                <source srcset="/images/Download-Center.jpg" media="(min-width: 1200px)" />
+                <source srcset="/images/Download-Center-mobile.jpg" media="(max-width: 420px)" />
+                <img src="/images/Download-Center.jpg"  alt="Rugged Monitoring - Downloads" />
+              </picture>
+                <div class="flex-caption slidertxt">
+                  <figcaption >
+                      <div class="bannerblock">
+                        <h1>
+                           Downloads
+                        </h1>
+                     <p id="user_welcome"></p>
+                     </div>
+                  </figcaption>
+                </div>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+     
+     <!--User Login-->
+      <section class="section" id="user_login" style="display:none;">
+        <div class="container-fluid">
+          <div class="section-header">
+            <h1>
+              User Login
+              <!--<small class="light">Navigation</small>-->
+            </h1>
+          </div>
+          <div class="row-fluid downloads">
+            <div class="span12">
+               <form id="user_login_form" style="text-align:center;">
+                <fieldset>
+                  <!--<label>User name/email</label>-->
+                  <input id="login_username" name="login_username" required placeholder="User Name/Email" type="text">
+                </fieldset>
+                <fieldset>
+                    <!--<label>Password</label>-->
+                    <input id="login_password" name="login_password" required placeholder="Password" type="password">
+                  </fieldset>
+                  <!--<fieldset>-->
+                      <!--<label>Mobile Number</label>-->
+                  <!--    <input id="number" name="number" placeholder="Contact" type="text">-->
+                  <!--</fieldset>-->
+                <button type="submit" class="btn btn-primary footer-btn" style="border-radius: 10px" value="Submit">Login</button>
+              </form>
+            </div>
+            <div class="span12" style="margin-left: 0px;text-align:center;">Or</div>
+            <div class="span12" style="text-align:center;margin-left: 0px;">
+              <button type="button" class="btn btn-primary footer-btn" style="border-radius: 10px" onclick="RequestAccess()" value="Submit">REQUEST ACCESS</button>
+            </div>
+            <div class="span12" style="text-align:center;margin-left: 0px;">
+              <a onclick="RequestPasswordReset()" style="font-size: 12px;" href="#">Reqest for password reset</a>
+            </div>
+          </div>
+          <br />
+          <br />
+        </div>
+      </section>
+      <!--Loader-->
+      <section class="section section-padded" style="height: 200px;" id="downloads_loader">
+        <div class="container-fluid">
+          <div class="span12">
+            <div class="loader"></div>
+          </div>
+        </div>
+      </section>
+      <!--User Manuals-->
+      <section class="section" id="downloads_list_section" style="display:none;">
+        <div class="container-fluid">
+          <div class="section-header">
+            <h1>
+              Download List
+              <!--<small class="light">Navigation</small>-->
+            </h1>
+          </div>
+          <div class="row-fluid downloads">
+            <div class="span8" id="downloads_list">
+              
+            </div>
+          </div>
+          <br />
+          <br />
+        </div>
+      </section>
+      
+      
+      <!--User Manuals-->
+      <section class="section" id="application_notes_section" style="display:none;">
+        <div class="container-fluid">
+          <div class="section-header">
+            <h1>
+              Application Notes
+              <!--<small class="light">Navigation</small>-->
+            </h1>
+          </div>
+          <div class="row-fluid downloads">
+            <div class="span8" id="application_notes_list">
+              
+            </div>
+          </div>
+          <br />
+          <br />
+        </div>
+      </section>
+      <!--User Manuals-->
+      <section class="section" id="drawings_list_section" style="display:none;">
+        <div class="container-fluid">
+          <div class="section-header">
+            <h1>
+              Drawings
+              <!--<small class="light">Navigation</small>-->
+            </h1>
+          </div>
+          <div class="row-fluid downloads">
+            <div class="span8" id="drawings_list">
+              
+            </div>
+          </div>
+          <br />
+          <br />
+        </div>
+      </section>
+      <!--User Manuals-->
+      <section class="section" id="rconnect_list_section" style="display:none;">
+        <div class="container-fluid">
+          <div class="section-header">
+            <h1>
+              R Connect
+              <!--<small class="light">Navigation</small>-->
+            </h1>
+          </div>
+          <div class="row-fluid downloads">
+            <div class="span8" id="rconnect_list">
+              
+            </div>
+          </div>
+          <br />
+          <br />
+        </div>
+      </section>
+      <!--User Manuals-->
+      <section class="section" id="user_manuals_section" style="display:none;">
+        <div class="container-fluid">
+          <div class="section-header">
+            <h1>
+              User Manuals
+              <!--<small class="light">Navigation</small>-->
+            </h1>
+          </div>
+          <div class="row-fluid downloads">
+            <div class="span8" id="user_manuals_list">
+              
+            </div>
+          </div>
+          <br />
+          <br />
+        </div>
+      </section>
+      [[Partial('/partial/_footer2.html')]]
+    </div>
+  </div>
+  <!-- Page Footer -->
+
+  <script src="javascripts/jquery.min.js" type="text/javascript"></script>
+  <script src="javascripts/bootstrap.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.flexslider-min.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.tweet.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.fancybox-media.js" type="text/javascript"></script>
+  <script src="javascripts/script.js" type="text/javascript"></script>
+  <script src="/javascripts/moment.min.js" type="text/javascript"></script>
+  <script src="/javascripts/downloads.js" type="text/javascript"></script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+
+@font-face {
+  font-family: Helvetica;
+  src: url('fonts/Helvetica.ttf');
+}
+@font-face {
+  font-family: Helvetica-Bold;
+  src: url('fonts/Helvetica-Bold.ttf');
+}
+@font-face {
+  font-family: Helvetica-BoldOblique;
+  src: url('fonts/ Helvetica-BoldOblique.ttf');
+}
+* {
+   font-family: 'Helvetica',sans-serif; 
+}
+body {
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 400;
+}
+body input, body textarea {
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 300;
+}
+h1,.more-link,.prdt-example h2,.sidebar-header,.section-dark,.list_link{
+
+   font-family: Helvetica-Bold;
+}
+h1 small{ 
+   font-family: Helvetica;
+}.prdt-example h2{
+  color:#fff;
+} .prdt-example .row-fluid{
+  background: #181818;
+    color: #fff;
+  
+} .prdt-example .content{
+  padding:35px;
+}  

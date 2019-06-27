@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if (gt IE 8)]><!--> 
+<html lang="en"> <!--<![endif]-->
+<head k-dl="/downloads/[[download_category]]">
+    <!--SEO Meta-->
+  <meta name="description" content="[[ruggedmonitoring.business_details.business_name]] in Québec, [[ruggedmonitoring.business_details.about_ruggedmonitoring.substr(0,78)]]."/>
+  <meta name="keywords" content="[[ruggedmonitoring.business_details.custom_keywords]]">
+  <!--twitter-->
+  <meta name="twitter:image" content="[[ruggedmonitoring.business_details.home_banner.url]]">
+  <meta name="twitter:description" content="[[ruggedmonitoring.business_details.business_name]] - [[ruggedmonitoring.business_details.about_ruggedmonitoring.substr(0,230).replace('\n','')]]">
+  <meta name="twitter:title" content="Home | [[ruggedmonitoring.business_details.business_name]]">
+  <meta name="twitter:card" content="summary">
+  <!--facebook-->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Home | [[ruggedmonitoring.business_details.business_name]]">
+  <meta property="og:url" content="[[ruggedmonitoring.rootaliasurl.url]]">
+  <meta property="og:image" content="[[ruggedmonitoring.business_details.home_banner.url]]">
+  <meta property="og:site_name" content="[[ruggedmonitoring.business_details.business_name]]">
+  <meta property="og:description" content="[[ruggedmonitoring.business_details.business_name]] - [[ruggedmonitoring.business_details.about_ruggedmonitoring.substr(0,230).replace('\n','')]]">
+  
+  
+  <title>Downloads | [[download_category]] - Rugged  Monitoring</title>
+  
+  [[Partial('/partial/_commonHEAD.html')]]
+  [[Partial('/partial/_schemaLocalBusiness.html')]]
+   <script type="text/javascript">
+   //global var for category
+    categoryid = '[[download_category]]'; 
+  
+    
+    if(!sessionStorage.getItem("userid")){
+      var redirectPath = encodeURIComponent(window.location.pathname.toString() + window.location.search.toString())
+      window.location.replace('/signin?redirect=' + redirectPath);
+    }
+  </script>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Page Header -->
+    [[Partial('/partial/_header.html')]]
+    <!-- Main Content -->
+    <k k-repeat="[[dc in ruggedmonitoring.download_categories]]">
+    <div k-show="[[dc.uid.tolower() == download_category.tolower()]]" id="content" role="main">
+      <!-- Promo Section -->
+      <section class="section blackbg">
+        <div class="container-fluid">
+         <div class="row-fluid">
+          <div class="super-hero-unit">
+            <figure>
+               <picture>
+                  <source srcset="/images/bannerimages/Download-Center.jpg" media="(min-width: 1200px)" />
+                  <source srcset="/images/bannerimages/Download-Center-mobile.jpg" media="(max-width: 420px)" />
+                  <img src="/images/bannerimages/Download-Center.jpg"  alt="Rugged Monitoring - Downloads" />
+                </picture>
+              
+                <div class="flex-caption slidertxt">
+                  <figcaption >
+                      <div class="bannerblock">
+                        <h1>
+                          [[dc.category_name]]
+                        </h1>
+                        <p>[[dc.banner_description]]</p>
+                     </div>
+                  </figcaption>
+                </div>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    
+      	<!-- start: Heading + Downloads List -->
+        <section class="section-alt section-padded">
+          <div class="container-fluid">
+            <!--breadcrumb-->
+            <div class="row-fluid">
+              <div class="span12">
+                <ul class="breadcrumb">
+                  <li><a href="/">Home</a> <span class="divider">»</span></li>
+                  <li><a>Resources</a> <span class="divider">»</span></li>
+                  <li><a href="/Downloads">Downloads</a> <span class="divider">»</span></li>
+                  <li class="active" style="text-transform: none;">[[dc.category_name]]</li>
+                </ul>
+              </div>
+
+            <!-- start: Filters Area -->
+            <div class="row-fluid">
+              <div class="span4">
+                <div class="dropdown" style="margin-bottom:10px">
+                   <button class="btn btn-primary dropdown-toggle all-verticals-button" id="selected_vertical" type="button" data-toggle="dropdown">
+                     <span id="selected_vertical_text">Select Industry</span>
+                     <span class="caret"></span>
+                   </button>
+                   <ul class="dropdown-menu verticals-dropdown" style="border-radius:0" role="menu" aria-labelledby="menu1" k-repeat="[[ruggedmonitoring.industryverticals, i, 0:ruggedmonitoring.industryverticals.length()]]">
+                     <li role="presentation" k-show="[[i == 0]]">
+                        <a role="menuitem" tabindex="-1" onclick="filterByVertical(this)" name="all" href="#">All Verticals</a>
+                     </li>
+                       <li role="presentation">
+                          <a role="menuitem" tabindex="-1" onclick="filterByVertical(this)" name="[[ruggedmonitoring.industryverticals[i].vid]]" href="#">[[ruggedmonitoring.industryverticals[i].name]]</a>
+                       </li>
+                   </ul>
+                </div>
+              </div>
+              <div class="span5">
+                <div class="dropdown" style="margin-bottom:10px">
+                   <button class="btn btn-primary dropdown-toggle all-products-button" id="selected_category" type="button" data-toggle="dropdown">
+                    <span id="selected_category_text">Select Product Category</span>
+                    <span class="caret"></span>
+                   </button>
+                   <ul class="dropdown-menu all-products-dropdown" style="border-radius:0" role="menu" aria-labelledby="menu1"  k-repeat="[[ruggedmonitoring.product_categories, i, 0: ruggedmonitoring.product_categories.length()]]">
+                      <li role="presentation" k-show="[[i == 0]]">
+                        <a role="menuitem" name="all" onclick="filterByProductCategory(this)" tabindex="-1" href="#">All Categories</a>
+                      </li>
+                      <li role="presentation">
+                        <a role="menuitem" name="[[ruggedmonitoring.product_categories[i].pcid]]" onclick="filterByProductCategory(this)" tabindex="-1" href="#">[[ruggedmonitoring.product_categories[i].name]]</a>
+                      </li>
+                   </ul>
+                </div> 
+              </div>
+              <div class="span3">
+                <div class="filter-search-form">
+                  <input id="name" name="name" onkeyup="filterBySearchKeyword(this)" placeholder="Search Keyword" class="width-100" type="text">
+                  <button type="button" class="button-primary search-icon">
+                    <i class="icon-search"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- end: Filters Area -->
+            <div class="row-fluid">
+              <div class="span12">
+                <div class="section-header border-small">
+                  <div class="heading-image-box">
+                    <img src="[[dc.category_image.url]]" style="width: 50px;" class="image-round" alt="[[dc.category_image.description]]">
+                    <h1 class="pos-rel top-6px">[[dc.category_name]]</h1>
+                  </div>
+                </div>
+                <div class="links-box">
+                  <ul class="download-links list-style-none" id="download-items-list">
+                    
+                    <!--<li>-->
+                    <!--  <div class="content-box">-->
+                    <!--    <h4 class="item-heading">Brochure: LsensT Fiber Optic Sensor - English-A4 I FEB 09, 2019</h4>-->
+                    <!--    <a href="#" class="link-box">-->
+                    <!--      <img src="https://via.placeholder.com/30" alt="">-->
+                    <!--      <span class="link-text">DS0008_LsensT_EN_A4_R06_Comp.pdf</span>-->
+                    <!--    </a>-->
+                    <!--  </div>-->
+                    <!--  <div class="button-box">-->
+                    <!--    <button type="submit" class="btn btn-primary footer-btn">Download</button>-->
+                    <!--  </div>-->
+                    <!--</li>-->
+                  </ul>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </section>
+        <!-- end: Heading + Downloads List --> <!-- start: Heading + Downloads List -->
+       
+    
+         <!-- start:Latest News-->
+        [[Partial('/partial/_latestNews.html')]]
+        [[Partial('/partial/_footer2.html')]]
+        <!-- end: Latest News -->
+        
+       
+        
+        
+      </div>
+    </k>
+  </div>
+  <!-- Page Footer -->
+
+  <script src="javascripts/jquery.min.js" type="text/javascript"></script>
+  <script src="javascripts/bootstrap.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.flexslider-min.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.tweet.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.fancybox-media.js" type="text/javascript"></script>
+  <script src="javascripts/script.js" type="text/javascript"></script>
+  <script src="/javascripts/moment.min.js" type="text/javascript"></script>
+  <script src="/javascripts/download-details.js" type="text/javascript"></script>
+  
+ 
+
+</body>
+</html>

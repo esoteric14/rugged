@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en" k-object="[[solution in ruggedmonitoring.solutions]]">
+<!--[if IE 8 ]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if (gt IE 8)]><!--> <!--<![endif]-->
+<head k-dl="/solutions-details/[[solution.name.urlencode()]]/[[solution._kid]]"> 
+  <!--SEO Meta-->
+  <meta name="description" content="[[solution.name]] - [[solution.summary_description.substr(0, 230)]] - [[ruggedmonitoring.business_details.business_name]] in Québec."/>
+  
+  <meta name="keywords" content="[[solution.summary_description.keywords[0]]],[[solution.summary_description.keywords[1]]],[[solution.summary_description.keywords[2]]],[[solution.summary_description.keywords[3]]],[[solution.summary_description.keywords[4]]],[[solution.summary_description.keywords[5]]],[[solution.summary_description.keywords[6]]]">
+  <!--twitter-->
+  <meta name="twitter:image" content="[[solution.summary_image.url]]">
+  <meta name="twitter:description" content="[[ruggedmonitoring.business_details.business_name]] - [[solution.name]] - [[solution.summary_description.substr(0, 230)]]">
+  <meta name="twitter:title" content="[[solution.name]] - [[ruggedmonitoring.business_details.business_name]]">
+  <meta name="twitter:card" content="summary">
+  <!--facebook-->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="[[solution.name]] - [[ruggedmonitoring.business_details.business_name]]">
+  <meta property="og:url" content="[[ruggedmonitoring.rootaliasurl.url]]/solutions-details/[[solution.name.urlencode()]]/[[solution._kid]]">
+  <meta property="og:image" content="[[solution.summary_image.url]]">
+  <meta property="og:site_name" content="[[ruggedmonitoring.business_details.business_name]]">
+  <meta property="og:description" content="[[ruggedmonitoring.business_details.business_name]] - [[solution.name]] - [[solution.summary_description.substr(0, 230)]]">
+  
+  
+  <title>[[solution.name]] - Rugged  Monitoring</title>
+  
+  [[Partial('/partial/_commonHEAD.html')]]
+  [[Partial('/partial/_schemaLocalBusiness.html')]]
+</head>
+<body>
+  <div class="wrapper" >
+    <!-- Page Header -->
+    [[Partial('/partial/_header.html')]]
+    <!-- Main Content -->
+    <div id="content" role="main">
+        <!-- start: Promo Section -->
+        <section class="section blackbg">
+          <div class="container-fluid">
+           <div class="row-fluid">
+            <div class="super-hero-unit">
+              <figure>
+                 <picture>
+                  <source srcset="/images/bannerimages/Solution.jpg" media="(min-width: 1200px)" />
+                  <source srcset="/images/bannerimages/Solution-mobile.jpg" media="(max-width: 420px)" />
+                  <img src="/images/bannerimages/Solution.jpg"  alt="Rugged Monitoring Solutions - [[solution.name]]" />
+                </picture>
+                  <div class="flex-caption slidertxt">
+                    <figcaption >
+                        <div class="bannerblock">
+                          <h1>
+                            Solutions
+                          </h1>
+                           <p>Customer application solutions that provide unique differentiation using fiber optic temperature sensors in E-mobility, Medical, Energy and other industry verticals</p>
+                       </div>
+                       <!-- <br>
+                       <a href="/industry-vertical/[[vertical.vid]]" class="more-link">LEARN MORE</a>-->
+                    </figcaption>
+                  </div>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end: Promo Section -->
+        
+        <!-- start: Page Content -->
+        <section class="section section-alt section-padded">
+          <div class="container-fluid">
+            <div class="row-fluid">
+             <div class="span12">
+               <!-- start: Breadcrumb -->
+                <ul class="breadcrumb">
+                  <li><a href="/">Home</a> <span class="divider">»</span></li>
+                   <li> <a href="[[View('/solutions.html').geturl()]]">Solutions</a> <span class="divider">»</span></li>
+                  <li class="active">[[solution.name]]</li>
+                </ul>
+                <!-- end: Breadcrumb -->
+             </div>
+            </div>
+            <div class="row-fluid">
+               <h1>[[solution.name]]</h1>
+            </div>
+            
+            
+            <div class="row-fluid" k-show="[[solution.summary_image.url.length > 0 || solution.summary_description.text.length > 0]]">
+              <div class="span12 center-align box-sm">
+                <div class="section-header">
+                    <h1>
+                      Solutions
+                      <small class="light">Summary</small>
+                    </h1>
+                </div>
+              </div>
+            </div>
+            
+            <div class="row-fluid solutions-description">
+              <div class="container">
+                <div class="row">
+                  <div class="span12">
+                    <div class="image-box width-50 f-left" k-show="[[solution.summary_image.url.length > 0 ]]">
+                      <img src="[[solution.summary_image.url]]" alt="[[solution.summary_image.description]]" />
+                    </div>
+                    <div class="content-box" k-show="[[solution.summary_description.text.length > 0 ]]">
+                      [[solution.summary_description.text]]
+                    </div>
+                  </div>
+                </div>
+                <!--<div class="row">-->
+                <!--  <div class="span12">-->
+                <!--    [[solution.secondary_description.text]]-->
+                <!--  </div>-->
+                <!--</div>-->
+              </div>
+            </div>
+          </div> 
+        </section>
+        <!-- end: Page Content -->
+        
+        <!-- start: Benefits -->
+        <section class="section section-alt section-padded" k-show="[[solution.benefits.length > 0]]">
+          <div class="container-fluid">
+             <div class="row">
+              <div class="span12 center-align">
+                  <div class="section-header">
+                    <h1>
+                      Benefits
+                    </h1>
+                </div>
+              </div> 
+            </div>
+            <div class="row">
+              <div class="span12  solutions-description">
+                [[solution.benefits]]
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end: Benefits -->
+        
+        <!-- start: Secondary Description -->
+        <!--<section class="section section-alt section-padded" k-show="[[solution.secondary_description.text.length > 0]]">-->
+        <!--  <div class="container-fluid">-->
+        <!--    <div class="row-fluid">-->
+        <!--      <div class="container solutions-description">-->
+        <!--      [[solution.secondary_description.text]]-->
+        <!--      </div>-->
+        <!--    </div>-->
+        <!--  </div>-->
+        <!--</section>-->
+        <!-- end: Secondary Description -->
+        
+        <!-- start: System Architecture -->
+         <section class="section section-alt section-padded" k-show="[[solution.system_architecture_image.url.length > 0]]">
+          <div class="container-fluid">
+            <div class="row-fluid">
+              <div class="span12 center-align">
+                <div class="section-header">
+                    <h1>
+                      System
+                      <small class="light">Architecture</small>
+                    </h1>
+                </div>
+              </div>
+            </div> 
+            <div class="row-fluid margin-bottom-20">
+              <div class="container">
+              <img src="[[solution.system_architecture_image.url]]" alt="[[solution.system_architecture_image.description]]" />
+              </div>
+            </div>
+            <div class="row margin-bottom-20" k-show="[[solution.after_accessories_description.length > 0]]">
+              <div class="span12">
+                    [[solution.after_accessories_description]]
+              </div> 
+            </div>
+           </div>
+        </section>
+        <!-- end: System Architecture -->
+        
+        <!-- start: Related Products -->
+        <section class="section section-alt section-padded">
+          <div class="container-fluid">
+            <div class="row-fluid">
+              <div class="span12">
+               <ul class="related-products-list list-style-none" k-repeat="[[solution.related_products, i, 0:solution.related_products.length()]]">
+                   <li class="products-list-inner">
+                       <h2>[[solution.related_products[i].name]]</h2>
+                       <div class="row-fluid">
+                         <div class="span4">
+                           <img src="[[solution.related_products[i].thumbnail_image.url]]" alt="[[solution.related_products[i].thumbnail_image.description]]">
+                         </div>
+                         <div class="span8">
+                           <div class="features-box">
+                             <h3>Features</h3>
+                            [[solution.related_products[i].key_highlights]]
+                           </div>
+                           <div class="spec-box">
+                             <h3>Specifications </h3>
+                             <ul class="tech-spec-list" k-repeat="[[techspec in solution.related_products[i].technical_specifications]]">
+                                <li>[[techspec.key]]</li>
+                                <li>[[techspec.value]]</li>
+                             </ul>
+                           </div>
+                         </div>
+                       </div>
+                   </li>
+               </ul>
+                
+              </div>
+            </div>
+          </div>
+        </section>  
+        <!-- end: Related Products --> 
+        
+        <!-- start: Related Accessories -->
+        <section class="section section-alt section-padded" k-show="[[solution.related_accessories.length > 0]]">
+          <div class="container-fluid">
+            <div class="row-fluid">
+              <div class="span12">
+               <ul class="related-products-list list-style-none" k-repeat="[[solution.related_accessories, i, 0:solution.related_accessories.length()]]">
+                   <li class="products-list-inner">
+                       <h2>[[solution.related_accessories[i].name]]</h2>
+                       <div class="row-fluid">
+                         <div class="span4">
+                           <img src="[[solution.related_accessories[i].image.url]]" alt="[[solution.related_accessories[i].image.description]]">
+                         </div>
+                         <div class="span8">
+                           <div class="features-box">
+                             <h3>Features</h3>
+                            [[solution.related_accessories[i].description]]
+                           </div>
+                         </div>
+                       </div>
+                   </li>
+               </ul>
+                
+              </div>
+            </div>
+            
+          </div>
+        </section>  
+        <!-- end: Related Accessories --> 
+        
+
+        <!-- start: System Configuration -->
+        <section class="section section-alt section-padded margin-bottom-20" k-show="[[solution.system_configuration[0].key.length > 0 || solution.system_configuration_description.length > 0]]">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="span12 center-align">
+                  <div class="section-header">
+                    <h1>
+                      System
+                      <small class="light">Configuration</small>
+                    </h1>
+                </div>
+              </div> 
+            </div>
+            <div class="row" k-show="[[solution.system_configuration_description.length > 0]]">
+              <div class="span12">
+                    [[solution.system_configuration_description]]
+              </div> 
+            </div>
+            <div class="row">
+              <div class="span12">
+              <table class="table table-striped" style="white-space: pre-line;">
+                <tbody k-repeat="[[solspec in solution.system_configuration]]">
+                  <tr>
+                    <td>[[solspec.key]]</td>
+                    <td>[[solspec.value]]</td>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end: System Configuration -->
+
+
+        <!-- start: Related Products in Categories -->
+        <section class="section spec-section" k-show="[[solution.related_products.length() > 0 || solution.related_accessories.length() > 0]]">
+          <div class="container-fluid">
+            <div class="row-fluid">
+              <div class="span12">
+                <div class="section-header">
+                  <h1>
+                    Related
+                    <small class="light">Category Products</small>
+                  </h1>
+                </div>
+              </div>
+              <div class="span12">
+                <div class="row-fluid child-width-50">
+                  <!-- start: Monitors and Sensors -->
+                  <div class="span6">
+                    <ul class="thumbnails list-style-none">
+                      <li class="span6 filter-lake">
+                        <figure class="round-box box-huge no-rounded">
+                          <a class="box-inner fancybox-media" href="/product-category/monitors" title="monitors product category link" rel="group">
+                            <img class="portfolioimg" alt="monitors product category image" src="images/monitors.jpg">
+                          </a>
+                          <figcaption>
+                            <h4>
+                              <a class="portfolio-title" href="/product-category/monitors" title="monitors product category link">
+                              Monitors
+                              </a>
+                            </h4>
+                          </figcaption>
+                        </figure>   
+                        <ul class="related-products left-align min-height-200 max-height-250" id="category-products-1" k-show="[[solution.related_products.length() > 0]]" k-repeat="[[solution.related_products, i, 0:solution.related_products.length()]]">
+                         <!--to show only description of monitors -->
+                         <li id="related_product_monitors_id" style="display:none;" k-norepeat>
+                            [[ruggedmonitoring.product_categories[0].short_description.substr(0,200)]]
+                          </li>
+                          <li class="related_product_monitors" k-show="[[solution.related_products[i].categories == 'monitors']]">
+                            <a href="[[View('/solution-product-details.html').setobject(solution.related_products[i])]]">
+                              [[solution.related_products[i].name]]
+                            </a>
+                          </li>
+                        </ul>
+                        <ul class="related-products left-align min-height-200 max-height-250" id="category-products-1" k-hide="[[solution.related_products.length() > 0]]">
+                         <!--to show only description of monitors -->
+                         <li  >
+                            [[ruggedmonitoring.product_categories[0].short_description.substr(0,200)]]
+                          </li>
+                         
+                        </ul>
+                        
+                        <a class="more-link" href="/product-category/monitors" title="monitors product category link">
+                          LEARN MORE
+                        </a>
+                      </li>
+                      <li class="span6 filter-lake">
+                        <figure class="round-box box-huge no-rounded">
+                          <a class="box-inner fancybox-media" href="/product-category/sensors" title="monitors product category link" rel="group">
+                            <img class="portfolioimg" alt="monitors product category image" src="images/sensors.jpg">
+                          </a>
+                          <figcaption>
+                            <h4>
+                              <a class="portfolio-title" href="/product-category/sensors" title="sensors product category link">
+                              Sensors
+                              </a>
+                            </h4>
+                          </figcaption>
+                        </figure>   
+                        <ul class="related-products left-align min-height-200 max-height-250" id="category-products-1" k-show="[[solution.related_products.length() > 0]]" k-repeat="[[solution.related_products, i, 0:solution.related_products.length()]]">
+                           <!--to show only description of sensors -->
+                          <li id="related_products_sensors_id" style="display:none" class="related_product_monitors" k-norepeat>
+                            [[ruggedmonitoring.product_categories[1].short_description.substr(0,200)]]
+                          </li>
+                          <li class="related_products_sensors" k-show="[[solution.related_products[i].categories == 'sensors']]">
+                            <a href="[[View('/solution-product-details.html').setobject(solution.related_products[i])]]">
+                              [[solution.related_products[i].name]]
+                            </a>
+                          </li>
+                        </ul>
+                       <ul class="related-products left-align min-height-200 max-height-250" id="category-products-1" k-hide="[[solution.related_products.length() > 0]]">
+                           <!--to show only description of sensors -->
+                          <li class="related_product_monitors">
+                            [[ruggedmonitoring.product_categories[1].short_description.substr(0,200)]]
+                          </li>
+                          
+                        </ul>
+                       
+                        <a class="more-link" href="/product-category/sensors" title="monitors product category link">
+                          LEARN MORE
+                        </a>
+                      </li>
+                    </ul>  
+                  </div>
+                  <!-- end: Monitors and Sensors -->
+                
+                  <!-- start: Software -->
+                  <div class="span6 related-list-2">
+                     <ul class="thumbnails portfolio list-style-none">
+                      <li class="span6 filter-lake">
+                        <figure class="round-box box-huge no-rounded">
+                          <a class="box-inner fancybox-media" href="/product-category/[[ruggedmonitoring.product_categories[2].pcid]]" title="[[ruggedmonitoring.product_categories[2].name]]" rel="group">
+                            <img class="portfolioimg" alt="[[ruggedmonitoring.product_categories[2].tile_image.url]]" src="[[ruggedmonitoring.product_categories[2].tile_image.url]]">
+                          </a>
+                          <figcaption class="margin-fix">
+                            <h4>
+                              <a class="portfolio-title" href="/product-category/[[ruggedmonitoring.product_categories[2].pcid]]" title="[[ruggedmonitoring.product_categories[2].name]]">
+                              [[ruggedmonitoring.product_categories[2].name]]
+                              </a>
+                            </h4>
+                          </figcaption>
+                        </figure>   
+                        <!--<ul class="related-products left-align min-height-200 max-height-250" id="category-products-1">-->
+                        <!--  <li>-->
+                        <!--    <a href="/downloads" title="Downloads">Rugged connect</a>-->
+                        <!--  </li>-->
+                        <!--</ul>     -->
+                        <ul class="related-products left-align min-height-200 max-height-250" id="category-products-1"  k-show="[[solution.related_softwares.length() > 0]]" k-repeat="[[solution.related_softwares, i , 0:solution.related_softwares.length]]">
+                          <li>
+                            <a href="/product-category/[[ruggedmonitoring.product_categories[2].pcid]]" title="Downloads">[[solution.related_softwares[i].download_link.description]]</a>
+                          </li>
+                        </ul>  
+                        <ul class="related-products left-align min-height-200 max-height-250" id="category-products-1"  k-hide="[[solution.related_softwares.length() > 0]]">
+                            <!--to show only description of sensors -->
+                          <li class="related_product_monitors">
+                            [[ruggedmonitoring.product_categories[2].short_description.substr(0,200)]]
+                          </li>  
+                        </ul>  
+                        <a class="more-link" href="/product-category/[[ruggedmonitoring.product_categories[2].pcid]]" title="Downloads">
+                          LEARN MORE
+                        </a>
+                      </li>
+                      <!-- end: Software -->
+                      
+                      <!-- start: Accessories -->
+                      <li class="span6 filter-lake">
+                        <figure class="round-box box-huge no-rounded">
+                          <a class="box-inner fancybox-media" href="/product-category/[[ruggedmonitoring.product_categories[3].pcid]]" title="[[ruggedmonitoring.product_categories[3].name]]" rel="group">
+                            <img class="portfolioimg" alt="[[ruggedmonitoring.product_categories[3].tile_image.url]]" src="[[ruggedmonitoring.product_categories[3].tile_image.url]]">
+                          </a>
+                          <figcaption class="margin-fix">
+                            <h4>
+                              <a class="portfolio-title" href="/product-category/[[ruggedmonitoring.product_categories[3].pcid]]" title="[[ruggedmonitoring.product_categories[3].name]]">
+                              [[ruggedmonitoring.product_categories[3].name]]
+                              </a>
+                            </h4> 
+                          </figcaption>
+                        </figure>   
+                        <ul k-show="[[solution.related_accessories.length() == 0]]" class="related-products left-align min-height-200 max-height-250 accessories-list-small" id="category-products-1">
+                          <!--show accessories description if no related_accessories-->
+                          <li>
+                            [[ruggedmonitoring.product_categories[3].short_description.substr(0,200)]]
+                          </li>
+                          
+                        </ul>
+                       
+                        <ul k-show="[[solution.related_accessories.length() > 0]]"  class="related-products left-align min-height-200 max-height-250 accessories-list-small" id="category-products-1" k-repeat="[[solution.related_accessories, i, 0:solution.related_accessories.length()]]">
+                          <li>
+                               <a href="/product-category/[[ruggedmonitoring.product_categories[3].pcid]]" title="[[ruggedmonitoring.product_categories[3].name]]">[[solution.related_accessories[i].name]]</a>
+                           </li>
+                        </ul>
+                       
+                        <a class="more-link" href="/product-category/[[ruggedmonitoring.product_categories[3].pcid]]" title="[[ruggedmonitoring.product_categories[3].name]]">
+                          LEARN MORE
+                        </a>
+                      </li>
+                    </ul>  
+                  </div>
+                  <!-- end: Accessories -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end: Related Products in Categories -->
+        
+        
+        <!--start: Brochures Download-->
+         <section class="section section-alt section-padded" k-show="[[solution.download_file.length > 0]]">
+          <div class="container-fluid">
+            <div class="section-header">
+              <h1>
+                Downloads
+              </h1>
+            </div>
+            <div class="row-fluid downloads">
+              <div class="container">
+                <div k-repeat="[[downloadfile in solution.download_file]]" class="span12">
+                  <div class="list_link" style="margin-bottom:0px;">
+                    <p>
+                      <a  title="[[downloadfile.description]]" href="[[downloadfile.url]]" target="_blank">[[downloadfile.description]]</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+           </div>
+        </section>
+        <!-- end: Brouchures Download -->
+        
+        <!-- start: Keyworkds -->
+        <section class="section section-alt section-padded" k-show="[[solution.summary_image.url.length > 0 || solution.summary_description.text.length > 0]]">
+          <div class="container-fluid">
+             <div class="row-fluid">
+              <div class="sidebar-widget widget_tag_cloud">
+                  <h6 class="sidebar-header">Keywords</h6>
+                  <ul k-repeat="[[keyword in solution.summary_description.keywords]]">
+                    <li>
+                      <a href="/search/[[keyword.urlencode()]]">
+                        <span>[[keyword]]</span>
+                      </a>
+                    </li>
+                  </ul>
+                 
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end: Keyworkds -->
+        
+        <!-- start:Latest News-->
+        [[Partial('/partial/_latestNews.html')]]
+        [[Partial('/partial/_footer2.html')]]
+        <!-- end: Latest News -->
+        
+       
+        
+        
+      </div>
+    </div>
+  <!-- Page Footer -->
+  
+  <script>
+  var x = document.getElementsByClassName("related_product_monitors");
+  if(!x || x.length === 0){
+    document.getElementById("related_product_monitors_id").setAttribute("style", "");
+  }
+  var y = document.getElementsByClassName("related_products_sensors");
+  if(!y || y.length === 0){
+    document.getElementById("related_products_sensors_id").setAttribute("style", "");
+  }
+
+  </script>
+  <!-- end: Page Footer -->
+  <script src="javascripts/jquery.min.js" type="text/javascript"></script>
+  <script src="javascripts/bootstrap.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.flexslider-min.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.tweet.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.fancybox-media.js" type="text/javascript"></script>
+  <script src="javascripts/script.js" type="text/javascript"></script>
+ <script src="/javascripts/moment.min.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if (gt IE 8)]><!--> 
+<html lang="en"> <!--<![endif]-->
+<head k-dl="/product-category/accessories/[[View('/accessories.html').currentpagenumber]]">
+  
+   <!--SEO Meta-->
+  <meta name="description" content="[[ruggedmonitoring.business_details.business_name]] in Québec, [[ruggedmonitoring.business_details.about_ruggedmonitoring.substr(0,78)]]."/>
+  <meta name="keywords" content="[[ruggedmonitoring.business_details.custom_keywords]]">
+  <!--twitter-->
+  <meta name="twitter:image" content="[[ruggedmonitoring.business_details.home_banner.url]]">
+  <meta name="twitter:description" content="[[ruggedmonitoring.business_details.business_name]] - [[ruggedmonitoring.business_details.about_ruggedmonitoring.substr(0,230).replace('\n','')]]">
+  <meta name="twitter:title" content="Home | [[ruggedmonitoring.business_details.business_name]]">
+  <meta name="twitter:card" content="summary">
+  <!--facebook-->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Home | [[ruggedmonitoring.business_details.business_name]]">
+  <meta property="og:url" content="[[ruggedmonitoring.rootaliasurl.url]]">
+  <meta property="og:image" content="[[ruggedmonitoring.business_details.home_banner.url]]">
+  <meta property="og:site_name" content="[[ruggedmonitoring.business_details.business_name]]">
+  <meta property="og:description" content="[[ruggedmonitoring.business_details.business_name]] - [[ruggedmonitoring.business_details.about_ruggedmonitoring.substr(0,230).replace('\n','')]]">
+  
+  
+  <title>Accessories - Rugged  Monitoring</title>
+  
+  [[Partial('/partial/_commonHEAD.html')]]
+  [[Partial('/partial/_schemaLocalBusiness.html')]]
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Page Header -->
+    [[Partial('/partial/_header.html')]]
+    <!-- Main Content -->
+    <div id="content" role="main">
+     <!-- Promo Section -->
+    <!--banner-->
+     <section class="section blackbg">
+        <div class="container-fluid">
+           <div class="row-fluid">
+          <div class="super-hero-unit">
+            <figure>
+                <picture>
+                  <source srcset="/images/bannerimages/Accessories.jpg" media="(min-width: 1200px)" />
+                  <source srcset="/images/bannerimages/Accessories_mobile.jpg" media="(max-width: 420px)" />
+                  <img src="/images/bannerimages/Accessories.jpg"  alt="Rugged Monitoring Accessories" />
+                </picture>
+                <div class="flex-caption slidertxt">
+                <figcaption >
+                    <div class="bannerblock">
+                      <h1>
+                         Accessories
+                      </h1>
+                   <p>Rugged fiber optic sensors and monitoring solutions for diverse applications.</p>
+                   </div>
+                   <!-- <br>
+                   <a href="/industry-vertical/[[vertical.vid]]" class="more-link">LEARN MORE</a>-->
+                </figcaption>
+              </div>
+            </figure>
+          </div>
+        </div>
+        </div>
+      </section>
+       
+   
+      <section class="section section-padded">
+        <div class="container-fluid" >
+          <!--breadcrumb-->
+          <div class="row-fluid">
+             <div class="span12">
+                <ul class="breadcrumb">
+                  <li><a href="/">Home</a> <span class="divider">»</span></li>
+                  <li class="active">Accessories</li>
+                </ul>
+             </div>
+          </div>
+          <div k-repeat="[[ruggedmonitoring.accessories, i, View('/accessories.html').offset:10]]">
+            <div class="row-fluid" style="margin-bottom: 35px;">
+              <div class="span4" style="margin-bottom: 20px;">
+                  <img src="[[ruggedmonitoring.accessories[i].image.url]]" alt="[[ruggedmonitoring.accessories[i].image.description]]">
+              </div>
+              <div class="span8">
+                <h2>
+                  [[ruggedmonitoring.accessories[i].name]]
+                </h2>
+                <div >
+                  [[ruggedmonitoring.accessories[i].description]]
+                </div>
+              </div>
+               <div class="span12" style="margin-left:0px">
+                <hr>
+              </div>
+            </div>
+          </div>
+          
+           <!-- start: Pagination -->
+              <div class="row-fluid">
+                <div class="span8 offset2">
+                    <nav class="post-navigation blog-pagination" id="nav-below">
+                    <ul class="pager">
+                      <li class="previous [[View('/accessories-list.html').currentpagenumber <= 1 ? 'disabled' : '']]" >
+                        <a class="news-prev" href="[[View('/accessories-list.html').currentpagenumber <= 1 ? '#' : View('/accessories-list.html').previouspage.url]]" 
+                          rel="prev">
+                          <i class="icon-angle-left"></i>
+                        </a>
+                      </li>
+                      <li class="pagination-numbers center-align">
+                        
+                        <ul class="number-list" id="pagination-numbers">
+                         
+                        </ul>
+                      </li>
+                      <li  class="news-next next [[View('/accessories-list.html').currentpagenumber >= (ruggedmonitoring.accessories.length() / 10) ? 'disabled' : '']]">
+                        <a href="[[View('/accessories-list.html').currentpagenumber >= (ruggedmonitoring.accessories.length() / 10) ? '#' : View('/accessories-list.html').nextpage.url]]" rel="next" >
+                          <i class="icon-angle-right"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <!-- end: Pagination -->
+         
+        </div>
+      </section>
+      <!--Related Vertials-->
+      <section class="section spec-section section-alt"  k-repeat="[[category in ruggedmonitoring.product_categories]]">
+        <div class="container-fluid"  k-show="[[category.pcid == 'accessories']]">
+          <div class="row-fluid">
+            <div class="section-header">
+              <h1>
+                Related
+                <small class="light">Verticals</small>
+              </h1>
+            </div>
+            
+            <ul class="thumbnails portfolio" k-repeat="[[vertical in ruggedmonitoring.industryverticals]]">
+              <li class="span3"  k-show="[[category.industry_verticals.indexof(vertical.vid) >= 0]]">
+                <figure class="round-box box-huge no-rounded">
+                  <a class="box-inner fancybox-media" href="/industry-vertical/[[vertical.vid]]"  title="[[vertical.name]]" rel="group" >
+                    <img  class="img-circle" style="height: 200px;width: 100%;" alt="[[vertical.tile_image.description]]"  src="[[vertical.tile_image.url]]">
+                  </a>
+                  <figcaption>
+                    <h4>
+                      <a class="portfolio-title" href="/industry-vertical/[[vertical.vid]]"  title="[[vertical.name]]">
+                      [[vertical.name]]
+                      </a>
+                    </h4>
+                     <p>
+                        [[vertical.short_description.substr(0,50)]][[vertical.short_description.length() > 50 ? '...' : '']]
+                    </p>
+                     <a class="more-link"  href="/industry-vertical/[[vertical.vid]]"  title="[[vertical.name]]">
+                    LEARN MORE
+                  </a>
+                  </figcaption>
+                </figure>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      [[Partial('/partial/_footer2.html')]]
+    </div>
+  </div>
+  
+  <script src="javascripts/jquery.min.js" type="text/javascript"></script>
+  <script src="javascripts/bootstrap.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.flexslider-min.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.tweet.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.fancybox-media.js" type="text/javascript"></script>
+  <script src="javascripts/script.js" type="text/javascript"></script>
+  <script src="/javascripts/moment.min.js" type="text/javascript"></script>
+<!-- Page Footer -->
+  <script type="text/javascript">
+    var paginationNum = Math.ceil([[ruggedmonitoring.accessories.length()/10]]);
+    var accessoriesURL = "/product-category/accessories/";
+    var linkURL = '';
+    var pageNo = '';
+    var listItem = '';
+    
+    for (i = 1; i <= paginationNum; i++){
+    	
+      pageNo = i;
+    	linkURL = accessoriesURL + i;
+      listItem = "<li class='number-list-item'><a href=" + linkURL + "><span class='tab'>" + pageNo + "</span></a></li>";
+      $("#pagination-numbers").append(listItem);
+    }
+    
+    $(document).ready(function(){
+      var url = window.location.href;
+      var lastChar = url.charAt(url.length - 1); 
+      $("#pagination-numbers li:nth-child(" + lastChar + ")").addClass("active");
+    });
+  </script>
+</body>
+</html>

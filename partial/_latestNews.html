@@ -1,0 +1,145 @@
+<!-- Latest News -->
+<section class="section sec-pad-bottom section-padded" k-partial>
+  <div class="container-fluid">
+    <!--<div class="section-header">
+      <h1>
+        Latest
+         <small class="light">news?</small>
+      </h1>
+    </div>-->
+    <ul class="unstyled row-fluid infolist">
+      
+      <li class="span4 news_span4"  k-repeat="[[ruggedmonitoring.news, i, 0:3]]">
+        <div class="row-fluid" k-show="[[ i == 0]]">
+           <h3>News  <a href="[[View('/news-list.html').geturl()]]" title="Rugged Monitoring News" class="seeall_link"><small>SEE All</small></a></h3>
+           <hr >
+       </div>
+        <div class="row-fluid">
+          <!--<div class="span4">
+            <div class="round-box box-small">
+              <a class="box-inner" href="post.html">
+                <img alt="[[ruggedmonitoring.updates[i].image.description]]" class="img-circle" src="[[ruggedmonitoring.updates[i].image != null ? ruggedmonitoring.updates[i].image.url : 'images/assets/landscapes/landscape-3-300x300.jpg']]">
+              </a>
+            </div>
+            <h5 class="text-center light">
+              <span data-date="[[ruggedmonitoring.updates[i].createdon]]"></span>
+            </h5>
+          </div>-->
+          <div class="span12">
+            <div class="list_link">
+              <p>
+              <a target="_blank" title="[[ruggedmonitoring.news[i].title]]" href="[[ruggedmonitoring.news[i].public_link.url]]">
+                [[ruggedmonitoring.news[i].title.substr(0,80)]][[ruggedmonitoring.news[i].title.length() > 80 ? '...' : '']]
+              </a>
+            </p> 
+           <p  class="list_text">
+            <!-- [[ruggedmonitoring.updates[i].short_description.substr(0,50)]]-->
+             <span class="list_text" data-date="[[ruggedmonitoring.news[i].createdon]]"></span> | [[ruggedmonitoring.news[i].source]] | [[ruggedmonitoring.news[i].category]]
+            </p>
+            </div>
+            
+          </div>
+        </div>
+        <!--<a k-show="[[ruggedmonitoring.updates.length() >= 3 ? i == 2 : i == (ruggedmonitoring.updates.length() - 1)]]" 
+        class="row-fluid more-link text-center" href="[[View('/updates-list.html').geturl()]]">
+          <strong>
+            View
+          </strong>
+          All
+        </a>-->
+      </li>
+      <li class="span4 news_span4"  k-repeat="[[ruggedmonitoring.events, i, 0:3]]">
+        <div class="row-fluid" k-show="[[ i == 0]]">
+           <h3>Upcoming Events  <a title="Upcoming Events" href="[[View('/events-list.html').geturl()]]" class="seeall_link"><small>SEE All</small></a></h3>
+           <hr >
+       </div>
+        <div class="row-fluid">
+          <div class="span12">
+            <div class="list_link">
+              <p>
+                <a target="_blank" title="[[ruggedmonitoring.events[i].title]]" href="[[ruggedmonitoring.events[i].public_link.url]]">
+                  [[ruggedmonitoring.events[i].title.substr(0,80)]][[ruggedmonitoring.events[i].title.length() > 80 ? '...' : '']]
+                </a>
+              </p>
+              <span class="list_text" data-date="[[ruggedmonitoring.events[i].event_date]]"></span>&nbsp;<span class="list_text"> <span k-show="[[ruggedmonitoring.events[i].source != null]]">| [[ruggedmonitoring.events[i].source]]</span>| [[ruggedmonitoring.events[i].category]]</span>
+              <p class="list_text">
+                 [[ruggedmonitoring.events[i].short_description.substr(0,50)]]
+              </p>
+            </div>
+          </div>
+          
+          <!--<div class="span4">-->
+          <!--  <div class="round-box box-small">-->
+          <!--    <a class="box-inner" href="post.html">-->
+          <!--      <img alt="Discussion group" class="img-circle" src="images/assets/landscapes/landscape-1-300x300.jpg">-->
+          <!--      <i class="icon-link"></i>-->
+          <!--    </a>-->
+          <!--  </div>-->
+          <!--  <h5 class="text-center light">-->
+          <!--    <span data-date="[[ruggedmonitoring.trade_shows[i].createdon]]"></span>-->
+          <!--  </h5>-->
+          <!--</div>-->
+          <!--<div class="span8">-->
+          <!--  <h3>-->
+          <!--    <a title="[[ruggedmonitoring.trade_shows[i].title]]" href="post.html">-->
+          <!--      [[ruggedmonitoring.trade_shows[i].title.substr(0, 20)]][[ruggedmonitoring.trade_shows[i].title.length() > 20 ? '...' : '']]-->
+          <!--    </a>-->
+          <!--  </h3>-->
+          <!--  <p>-->
+          <!--    [[ruggedmonitoring.trade_shows[i].short_description.substr(0, 50)]]-->
+          <!--  </p>-->
+          <!--</div>-->
+        </div>
+         
+      </li>
+      <li class="span4 news_span4" k-repeat="[[ruggedmonitoring.blogs, i, 0:3]]">
+        <div class="row-fluid" k-show="[[ i == 0]]">
+           <h3>Discussion / Blog  <a class="seeall_link" href="[[View('/updates-list.html').geturl()]]"><small>SEE All</small></a></h3>
+           <hr >
+       </div>
+       
+        <div class="row-fluid" >
+          
+          <div class="span12">
+               <div class="list_link">
+            <p>
+              <a  title="[[ruggedmonitoring.blogs[i].title]]" href="[[View('/update-details.html').setObject(ruggedmonitoring.blogs[i])]]">
+                [[ruggedmonitoring.blogs[i].title.substr(0,80)]][[ruggedmonitoring.blogs[i].title.length() > 80 ? '...' : '']]
+              </a>
+            </p>
+           <p  class="list_text">
+            <!-- [[ruggedmonitoring.updates[i].short_description.substr(0,50)]]-->
+             <span class="list_text" data-date="[[ruggedmonitoring.blogs[i].createdon]]"></span> | [[ruggedmonitoring.blogs[i].source]]
+            </p>
+          </div>
+          </div>
+          <!--<div class="span4">-->
+          <!--  <div class="round-box box-small">-->
+          <!--    <a class="box-inner" href="post.html">-->
+          <!--      <img alt="Discussion group" class="img-circle" src="images/assets/landscapes/landscape-1-300x300.jpg">-->
+          <!--      <i class="icon-link"></i>-->
+          <!--    </a>-->
+          <!--  </div>-->
+          <!--  <h5 class="text-center light">-->
+          <!--    <span data-date="[[ruggedmonitoring.discussion_groups[i].createdon]]"></span>-->
+          <!--  </h5>-->
+          <!--</div>-->
+          <!--<div class="span8">-->
+          <!--  <h3>-->
+          <!--    <a title="[[ruggedmonitoring.discussion_groups[i].title]]" href="post.html">-->
+          <!--      [[ruggedmonitoring.discussion_groups[i].title.substr(0, 20)]][[ruggedmonitoring.discussion_groups[i].title.length() > 20 ? '...' : '']]-->
+          <!--    </a>-->
+          <!--  </h3>-->
+          <!--  <p>-->
+          <!--    [[ruggedmonitoring.discussion_groups[i].short_description.substr(0, 50)]]-->
+          <!--  </p>-->
+          <!--</div>-->
+          
+          
+          
+        </div>
+       
+      </li>
+    </ul>
+  </div>
+</section>

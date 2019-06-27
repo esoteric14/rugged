@@ -1,0 +1,287 @@
+<section class="section section-alt section-padded section-dark" k-partial>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      
+     <!-- <div class="span3">
+        <div class="sidebar-widget list-widget">
+          <h3 class="sidebar-header">Recent posts</h3>
+          <ul>
+            <li k-repeat="[[ruggedmonitoring.updates, i , 0: 3]]">
+           
+                <a href="#">
+                  [[ruggedmonitoring.updates[i].title.substr(0,50)]]
+                </a>
+              </h4>
+              <p class="light"> 
+                <small>[[ruggedmonitoring.updates[i].createdon]]</small>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>-->
+        <div class="span4">
+        <div class="sidebar-widget">
+          <h3 class="sidebar-header">About</h3>
+          <p class="ftr-about">
+              [[ruggedmonitoring.business_details.about_ruggedmonitoring]]
+          </p>
+        </div>
+      </div>
+      <div class="span2">
+        <div class="sidebar-widget list-widget">
+          <h3 class="sidebar-header">Quick Links</h3>
+          <ul>
+            <li>
+          
+                <a href="[[ruggedmonitoring.rootaliasurl.url]]">
+                  Home
+                  
+                </a>
+              
+            </li>
+            <li>
+            
+                <a href="[[View('/about.html').geturl()]]">
+                  About Us</a>
+                 
+              
+            </li>
+            <li>
+             
+                <a href="#">
+                  Products
+                 
+                </a>
+             
+            </li>
+            <li>
+           
+                <a href="/industry-vertical/[[ruggedmonitoring.industryverticals[0].vid]]">
+                  Industries
+                 
+                </a>
+             
+            </li>
+            <li>
+               <a href="[[View('/contact.html').geturl()]]">
+                  Contact Us
+                 
+                </a>
+           
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="span3">
+         <h3 class="sidebar-header">Contact US</h3>
+            <div>
+              1415 Frank-Carrel
+              <br />Suite 230
+              <br />Quebec, QC 
+              <br />G1N 4N7 - CANADA
+              <p></p>
+              <p> Call US: <a href="tel:+1-418-767-0111">+1-418-767-0111</a></p>
+              <p></p>
+              <p>Email US: <a href="mailto:info@ruggedmonitoring.com">info@ruggedmonitoring.com</a></p>
+              <p>Web: www.ruggedmonitoring.com</p>
+              </div>
+              <div>
+                <ul class="unstyled inline small-screen-center big social-icons">
+              <li>
+                <a data-iconcolor="#3b5998" target="_blank" href="https://www.linkedin.com/company/ruggedmonitoring/">
+                  <i class="icon-linkedin"></i>
+                </a>
+              </li>  
+              <li>
+                <a data-iconcolor="#3b5998" target="_blank"  href="#">
+                 <img src="/images/xing-logo.svg" width="20px">
+                </a>
+              </li>
+              <li>
+                <a data-iconcolor="#3b5998" target="_blank"  href="#">
+                  <i class="icon-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a data-iconcolor="#00a0d1" target="_blank" href="https://twitter.com/RuggedMonitorin">
+                  <i class="icon-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a data-iconcolor="#00a0d1" target="_blank"  href="#">
+                  <i class="icon-youtube"></i>
+                </a>
+              </li>
+              <li>
+                <a data-iconcolor="#3b5998" target="_blank"  href="#">
+                  <i class="icon-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a data-iconcolor="#910101" target="_blank"  href="#">
+                  <i class="icon-pinterest"></i>
+                </a>
+              </li>
+            </ul>
+             </div>
+      </div>
+      <div class="span3">
+        <div class="sidebar-widget">
+          <h3 class="sidebar-header">Request Callback</h3>
+          <form id="ruggedfooterformrequestcallback">
+              <fieldset>
+                <!--<label>Name</label>-->
+                <input id="name" name="name" placeholder="Name" type="text">
+              </fieldset>
+              <fieldset>
+                  <!--<label>Email</label>--> 
+                  <input id="email" name="email" placeholder="Email" type="text">
+                </fieldset>
+                <fieldset>
+                    <!--<label>Mobile Number</label>-->
+                    <input id="number" name="number" placeholder="Contact" type="text">
+                </fieldset>
+                <button type="submit" class="btn btn-primary footer-btn" style="border-radius: 10px" value="Submit">Send</button>
+            </form>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <p></p>
+  <p></p>
+  <div class="container-fluid">
+    <br>
+    <br>
+    <p class="text-center">&copy; Copyright 2018 Rugged Monitoring Company</p>
+    <p class="text-center">&copy; Copyright 2018</p>
+    
+  </div>
+  <!--Callback form-->
+  	<script src="https://cdn.kitsune.tools/libs/webforms/v1/webforms.min.js"></script>
+		<script>
+		
+			
+		// to submit data to the please use following object with exact properties name : 
+		let webformObject_5b17eff011c53a04f8325fa7 =  {
+        "name": "name",
+        "number": "number",
+        "email": "email"
+    };
+			
+			// this object contains the description of all the properties in object
+			let _objectPropertiesDescription_5b17eff011c53a04f8325fa7 = {
+          "name": {
+              "IsRequired": true,
+              "DataType": "STR"
+          },
+          "number": {
+              "IsRequired": true,
+              "DataType": "NUMBER"
+          },
+          "email": {
+              "IsRequired": true,
+              "DataType": "STR"
+          }
+      }
+			
+			
+	
+			function serializeArray(form) {
+				var field, l, s = [];
+				if (typeof form == 'object' && form.nodeName == "FORM") {
+						var len = form.elements.length;
+						for (var i=0; i<len; i++) {
+								field = form.elements[i];
+								if (field.name && !field.disabled && field.type != 'file' &&
+								 field.type != 'reset' && field.type != 'submit' && field.type != 'button') {
+										if (field.type == 'select-multiple') {
+												l = form.elements[i].options.length; 
+												for (j=0; j<l; j++) {
+														if(field.options[j].selected)
+																s[s.length] = { name: field.name, value: field.options[j].value };
+												}
+										} else if ((field.type != 'checkbox' && field.type != 'radio') || field.checked) {
+												s[s.length] = { name: field.name, value: field.value };
+										}
+								}
+						}
+				}
+				return s;
+			}
+	
+			function getFormDataAndSubmit_5b17eff011c53a04f8325fa7(formId){
+	
+				const objectifyForm = (formArray) => {
+					let returnArray = {};
+					for (let i = 0; i < formArray.length; i++) {
+						returnArray[formArray[i]['name']] = formArray[i]['value'];
+					}
+					return returnArray;
+				}
+	
+				let form = document.getElementById(formId);
+				let serializedArray = serializeArray(form);
+				let formData = objectifyForm(serializedArray);
+				submit_webform_data_5b17eff011c53a04f8325fa7(formData);
+			}
+	
+	
+			
+			function submit_webform_data_5b17eff011c53a04f8325fa7(data) {
+				let _authenticationId = '5b30c5bc2f6e7a050ade0b13'
+				let _webformName = 'ruggedfooterformrequestcallback'
+				let _webformId = '5b17eff011c53a04f8325fa7'
+	
+				webforms.initialize(_webformName, _webformId, _authenticationId)
+					.then(()=>{
+						webforms.submit(data);
+							  alert("Your Feedback Successfully Submitted");
+                    
+                      document.getElementById("ruggedfooterformrequestcallback").reset();
+					})
+					.catch(()=>{
+						console.log('error')
+					})
+			}
+		
+		</script>
+	
+		
+    <!-- javascript -->
+		<script>
+			let form_5b17eff011c53a04f8325fa7 = document.getElementById('ruggedfooterformrequestcallback');
+			form_5b17eff011c53a04f8325fa7.onsubmit = function(e) {
+				e.preventDefault();
+				getFormDataAndSubmit_5b17eff011c53a04f8325fa7('ruggedfooterformrequestcallback');	
+			}
+		</script>
+</section>
+ <script type="text/javascript">
+ 
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,fr,ja,id,th,vi,ms,hi,pl,de,zh-CN,es,pt,ru,ko', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+  }
+  
+   function LogoutUser(){
+    
+    sessionStorage.removeItem("userid");
+    sessionStorage.removeItem("username");
+    sessionStorage.removeItem("displayname");
+    localStorage.removeItem("userid");
+    localStorage.removeItem("username");
+    localStorage.removeItem("displayname");
+    location.reload();
+ }
+ 
+ //update session storage if localStorage is there
+ if(localStorage.getItem("userid")){
+    sessionStorage.setItem("userid", localStorage.getItem("userid"));
+    sessionStorage.setItem("displayname", localStorage.getItem("displayname"));
+    sessionStorage.setItem("username", localStorage.getItem("username"));
+ }
+ //setting global userid 
+ globalUserId = sessionStorage.getItem("userid");
+ 
+</script>
+<script type="text/javascript" async defer src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

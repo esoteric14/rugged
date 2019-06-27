@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if (gt IE 8)]><!--> 
+<html lang="en" k-object="[[note in ruggedmonitoring.application_notes]]"> <!--<![endif]-->
+<head k-dl="/downloads/application-notes/[[note.title.substr(0,100)]]/[[note._kid]]">
+    <!--SEO Meta-->
+  <meta name="description" content="[[ruggedmonitoring.business_details.business_name]] in Québec, [[ruggedmonitoring.business_details.about_ruggedmonitoring.substr(0,78)]]."/>
+  <meta name="keywords" content="[[ruggedmonitoring.business_details.custom_keywords]]">
+  <!--twitter-->
+  <meta name="twitter:image" content="[[note.image1.url]]">
+  <meta name="twitter:description" content="[[note.image1.description]]">
+  <meta name="twitter:title" content="[[note.title]]">
+  <meta name="twitter:card" content="summary">
+  <!--facebook-->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="[[note.title]]">
+  <meta property="og:url" content="[[ruggedmonitoring.rootaliasurl.url]]/downloads/application-notes/[[note.title.urlencode()]]/[[note._kid]]">
+  <meta property="og:image" content="[[note.image1.url]]">
+  <meta property="og:site_name" content="[[ruggedmonitoring.business_details.business_name]]">
+  <meta property="og:description" content="[[note.image1.description]]">
+  
+  
+  <title> [[note.title]] - Appication Notes - Rugged  Monitoring</title>
+  
+  [[Partial('/partial/_commonHEAD.html')]]
+  [[Partial('/partial/_schemaLocalBusiness.html')]]
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Page Header -->
+    [[Partial('/partial/_header.html')]]
+    <!-- Main Content -->
+    <div id="content" role="main">
+     <!-- Promo Section -->
+      <section class="section blackbg">
+        <div class="container-fluid">
+           <div class="row-fluid">
+          <div class="super-hero-unit">
+            <figure>
+              <img alt="" src="/images/bannerimages/Header-Application-Notes.jpg">
+               <picture>
+                  <source srcset="/images/bannerimages/Header-Application-Notes.jpg" media="(min-width: 1200px)" />
+                  <source srcset="/images/bannerimages/Header-Application-Notes-mobile.jpg" media="(max-width: 420px)" />
+                  <img src="/images/bannerimages/Header-Application-Notes.jpg"  alt="Rugged Monitoring - Downloads - Application Notes" />
+                </picture>
+                <div class="flex-caption slidertxt">
+                <figcaption >
+                    <div class="bannerblock">
+                      <h1>
+                         Application Notes
+                      </h1>
+                   <p>[[note.title]]</p>
+                   </div>
+                </figcaption>
+              </div>
+            </figure>
+          </div>
+        </div>
+        </div>
+      </section>
+      
+      
+      
+       <!-- Blog -->
+      <section class="section section-alt section-padded">
+          <div class="container-fluid">
+          <!-- Breadcrumb --> 
+          <div class="row-fluid">
+             <div class="span12">
+                <ul class="breadcrumb">
+                  <li><a href="/">Home</a> <span class="divider">»</span></li>
+                  <li>Resources  <span class="divider">»</span></li>
+                  <li><a href="[[View('/app-notes.html').geturl()]]">Application Notes</a> <span class="divider">»</span></li>
+                  <li class="active">[[note.title]]</li>
+                </ul> 
+             </div>
+            </div>
+          <!-- end: Breadcrumb -->
+        </div>
+        
+        
+          <div class="container-fluid">
+            <div class="row-fluid">
+               <h1>[[note.title]]</h1>
+            </div>
+             <!-- start: Brief description-->
+            <!--<div class="row-fluid">-->
+            <!--  <div class="span12 margin-left-0">-->
+            <!--    [[note.brief_description]]-->
+            <!--  </div>-->
+            <!--</div>-->
+            <!-- start: Image + Description 1 -->
+            <div class="row-fluid">
+              <div class="span12 box-md"  k-show="[[note.image1.url.length > 0]]">
+                <img src="[[note.image1.url]]" alt="[[note.image1.description]]">
+              </div>
+              <div class="span12 margin-left-0" k-show="[[note.image1.url.length > 0]]">
+                [[note.description1.text]]
+              </div>
+            </div>
+            <!-- end: Image + Description 1 -->
+            
+            <!-- start: Image + Description 2 -->
+            <div class="row-fluid">
+              <div class="span12 box-md" k-show="[[note.image2.url.length > 0]]">
+                <img src="[[note.image2.url]]" alt="[[note.image2.description]]">
+              </div>
+              <div class="span12 margin-left-0" k-show="[[note.description2.text.length > 0]]">
+                [[note.description2.text]]
+              </div>
+            </div>
+            <!-- end: Image + Description 2 -->
+            
+            <!-- start: Image + Description 3 -->
+            <div class="row-fluid">
+              <div class="span12 box-md"  k-show="[[note.image3.url.length > 0]]">
+                <img src="[[note.image3.url]]" alt="[[note.image3.description]]">
+              </div>
+              <div class="span12 margin-left-0" k-show="[[note.description3.text.length > 0]]">
+                [[note.description3.text]]
+              </div>
+            </div>
+            <!-- end: Image + Description 3 -->
+            
+            <!-- start: Blog Meta Info -->
+            <div class="row-fluid">
+              <div class="span-12 blog-meta-box">
+                <p class="blog-author" k-show="[[note.author.length > 0]]">Blog writtern by [[note.author]] </p>
+                <p class="published-date">Published on <span class="list_text" data-date="[[note.createdon]]"></span></p>
+                 
+              </div>
+            </div>
+            <!-- end: Blog meta Info -->
+            
+            <!-- start: Share Bar -->
+            <div class="row-fluid blog-share-bar">
+              <div class="span12">
+                <ul class="share-bar-list list-style-none">
+                  <li>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=[[ruggedmonitoring.rootaliasurl.url]]/downloads/application-notes/[[note.title.urlencode()]]/[[note._kid]]&title=[[note.title]]" target="_blank">
+                      <i class="icon-linkedin share-icon"></i>
+                      <span class="nework-name">Linkedin </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.xing.com/spi/shares/new?url=[[ruggedmonitoring.rootaliasurl.url]]/downloads/application-notes/[[note.title.urlencode()]]/[[note._kid]]" target="_blank">
+                      <img src="//kit-cdn.com/5bed49a7299c810001e423bb/v14/images/xing-logo.svg?v=14">
+                      <span class="nework-name">Xing </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?&related=twitterapi%2Ctwitter&url=[[ruggedmonitoring.rootaliasurl.url]]/downloads/application-notes/[[note.title.urlencode()]]/[[note._kid]]" target="_blank">
+                      <i class="icon-twitter share-icon"></i>
+                      <span class="nework-name">Twitter </span>
+                    </a>
+                  </li>
+                   <li>
+                    <a href="https://www.facebook.com/dialog/share?app_id=257794650967317&display=popup&href=[[ruggedmonitoring.rootaliasurl.url]]/downloads/application-notes/[[note.title.urlencode()]]/[[note._kid]]" target="_blank">
+                      <i class="icon-facebook share-icon"></i>
+                      <span class="nework-name">Facebook </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- end: Share Bar -->
+
+          
+            <!-- start: Related Solutions and Blogs -->
+            <section class="section spec-section section-padded" k-show="[[ note.related_solutions.length() > 0 || note.related_blogs.length() > 0 || note.related_notes.length() > 0]]">
+              <div class="container">
+                <div class="row-fluid">
+                  <div class="span12">
+                    <div class="section-header">
+                      <h1>
+                        Related
+                        <small class="light">Articles</small>
+                      </h1>
+                    </div>
+                  </div>
+                  <div class="span12 margin-left-0">
+                    <div class="row-fluid">
+                      <ul class="thumbnails portfolio related-post-box">
+                        
+                        <!-- start: Related Solutions -->
+                        <li class="span3" k-show="[[note.related_solutions.length > 0]]">
+                           <figure class="round-box box-huge no-rounded">
+                              <img class="portfolioimg" alt="" src="images/thumbnails/Thumbnail-RELATED_Solutions.jpg">
+                              <figcaption>
+                                 <h4 class="portfolio-title">Related Solutions</h4>
+                                   <ul class="related-products left-align min-height-120 list-style-none" k-repeat="[[ruggedmonitoring.solutions, i, 0:ruggedmonitoring.solutions.length]]">
+                                     <li class="related-list-sub" k-show="[[note.related_solutions.tolower().indexof(ruggedmonitoring.solutions[i].sid.tolower()) >= 0]]">
+                                       <a title="[[ruggedmonitoring.solutions[i].name]]" href="[[View('/solutions-details.html').setobject(ruggedmonitoring.solutions[i])]]">
+                                         [[ruggedmonitoring.solutions[i].name]]
+                                       </a>
+                                     </li>
+                                     <!--<li class="related-list-sub" k-show="[[note.related_solutions.tolower().indexof(ruggedmonitoring.solutions[i].sid.tolower()) < 0]]">-->
+                                     <!--  <p>No related solutions</p>-->
+                                     <!--</li>-->
+                                   </ul>
+                                 <a class="more-link" href="[[View('/solutions.html').geturl()]]">LEARN MORE</a>
+                              </figcaption>
+                           </figure>
+                        </li>
+                        <!-- end: Related Solutions -->
+                        
+                        <!-- start: Related Blogs -->
+                        <li class="span3" k-show="[[note.related_blogs.length > 0]]">
+                           <figure class="round-box box-huge no-rounded">
+                              <img class="portfolioimg" alt="" src="images/thumbnails/Thumbnail-RELATED_Blogs.jpg">
+                              <figcaption>
+                                 <h4 class="portfolio-title">Related Blogs</h4>
+                                 <ul class="related-products left-align min-height-120 list-style-none" k-repeat="[[ruggedmonitoring.blogs, i, 0:ruggedmonitoring.blogs.length]]">
+                                   <li class="related-list-sub" k-show="[[note.related_blogs.tolower().indexof(ruggedmonitoring.blogs[i]._kid.tolower()) >= 0]]">
+                                     <a title="#" href="[[ruggedmonitoring.application_notes[i].download_link.url]]" target="_blank">
+                                       [[ruggedmonitoring.blogs[i].title]]
+                                     </a>
+                                   </li>
+                                   <!--<li class="related-list-sub" k-show="[[note.related_blogs.tolower().indexof(ruggedmonitoring.blogs[i].title.tolower()) < 0]]">-->
+                                   <!--  <a title="#" href="[[ruggedmonitoring.application_notes[i].download_link.url]]" target="_blank">-->
+                                   <!--    <p>No related blogs</p>-->
+                                   <!--  </a>-->
+                                   <!--</li>-->
+                                 </ul>
+                                 <a class="more-link" href="[[View('/updates-list.html').geturl()]]">LEARN MORE</a>
+                              </figcaption>
+                           </figure>
+                        </li>
+                        <!-- end: Related Blogs -->
+                        
+                        <!-- start: Related Applicaton Notes -->
+                        <li class="span3" k-show="[[note.related_notes.length > 0]]">
+                           <figure class="round-box box-huge no-rounded">
+                              <img class="portfolioimg" alt="" src="images/thumbnails/Thumbnail-RELATED_Application-Notes.jpg">
+                              <figcaption>
+                                 <h4 class="portfolio-title">Related App Notes</h4>
+                                 <ul class="related-products left-align min-height-120 list-style-none" k-repeat="[[ruggedmonitoring.application_notes, i, 0:ruggedmonitoring.application_notes.length]]">
+                                   <li class="related-list-sub" k-show="[[note.related_notes.tolower().indexof(ruggedmonitoring.application_notes[i].note_id.tolower()) >= 0]]">
+                                     <a title="#" href="[[View('/app-notes-details.html').setObject(ruggedmonitoring.application_notes[i])]]" target="_blank">
+                                       [[ruggedmonitoring.application_notes[i].title.substr(0,100)]]
+                                     </a>
+                                   </li>
+                                   <!--<li class="related-list-sub" k-show="[[note.application_note_id.tolower().indexof(ruggedmonitoring.application_notes[i].note_id.tolower()) < 0]]">-->
+                                   <!--  <p>No related application notes</p>-->
+                                   <!--</li>-->
+                                 </ul>
+                                 <a class="more-link" href="[[View('/app-notes.html').geturl()]]">LEARN MORE</a>
+                              </figcaption>
+                           </figure>
+                        </li>
+                        <!-- end: Related Applicaton Notes -->
+                        
+                        <!-- stat: Downloads -->
+                        <!--<li class="span3" k-show="[[note.download_file.length > 0]]">-->
+                        <!--   <figure class="round-box box-huge no-rounded">-->
+                        <!--      <img class="portfolioimg" alt="" src="https://cdn.kitsune.tools/v1/5bed49a7299c810001e423bd/rugged_connect_fiber_optic_temperature_software_thumbnail-5c3400c5d41f770001afc173.jpg">-->
+                        <!--      <figcaption>-->
+                        <!--         <h4 class="portfolio-title">Documents</h4>-->
+                        <!--         <ul class="related-products left-align min-height-120 list-style-none" k-repeat="[[note.download_file, i, 0:blog.download_file.length]]">-->
+                        <!--           <li class="related-list-sub">-->
+                        <!--             <a class="download-link-class" title="[[note.download_file[i].description]]" href="[[note.download_file[i].url]]" target="_blank">-->
+                        <!--               [[note.download_file[i].description]]-->
+                        <!--             </a>-->
+                        <!--           </li>-->
+                        <!--         </ul>-->
+                        <!--         <a class="more-link" href="/downloads">LEARN MORE</a>-->
+                        <!--      </figcaption>-->
+                        <!--   </figure>-->
+                        <!--</li>-->
+                        <!-- end: Downloads -->
+                        
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- end: Related Solutions and Blogs -->
+
+          </div>
+        </section>
+        
+         <!-- start: Keywords  -->
+        <div class="container-fluid">
+          <div class="row-fluid">
+            <div class="sidebar-widget widget_tag_cloud">
+                <h6 class="sidebar-header">Tags</h6>
+                 <ul>
+                  <li k-repeat="[[keyword in note.description1.keywords]]">
+                      <a href="/search/[[keyword.urlencode()]]">
+                        <span>[[keyword]]</span>
+                      </a>
+                  </li>
+                </ul>
+                <ul k-show="[[note.description2.keywords.length() > 0]]">
+                  <li k-repeat="[[keyword1 in note.description2.keywords]]">
+                    <a href="/search/[[keyword1.urlencode()]]">
+                      <span>[[keyword1]]</span>
+                    </a>
+                  </li>
+                </ul>
+                <ul k-show="[[note.description3.keywords.length() > 0]]">
+                  <li k-repeat="[[keyword2 in note.description3.keywords]]">
+                    <a href="/search/[[keyword2.urlencode()]]">
+                      <span>[[keyword2]]</span>
+                    </a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+        <!-- end: Keywords -->
+        
+        <!--Latest news-->
+        [[Partial('/partial/_latestNews.html')]]
+        [[Partial('/partial/_footer2.html')]]
+        
+       
+    </div>
+  </div>
+  
+  
+  <!-- Page Footer -->
+
+  <script src="javascripts/jquery.min.js" type="text/javascript"></script>
+  <script src="javascripts/bootstrap.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.flexslider-min.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.tweet.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.fancybox-media.js" type="text/javascript"></script>
+  <script src="javascripts/script.js" type="text/javascript"></script>
+  <script src="/javascripts/moment.min.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if (gt IE 8)]><!--> 
+<html lang="en"> <!--<![endif]-->
+<head k-dl="/downloads">
+    <!--SEO Meta-->
+  <meta name="description" content="[[ruggedmonitoring.business_details.business_name]] in Québec, [[ruggedmonitoring.business_details.about_ruggedmonitoring.substr(0,78)]]."/>
+  <meta name="keywords" content="[[ruggedmonitoring.business_details.custom_keywords]]">
+  <!--twitter-->
+  <meta name="twitter:image" content="[[ruggedmonitoring.business_details.home_banner.url]]">
+  <meta name="twitter:description" content="[[ruggedmonitoring.business_details.business_name]] - [[ruggedmonitoring.business_details.about_ruggedmonitoring.substr(0,230).replace('\n','')]]">
+  <meta name="twitter:title" content="Home | [[ruggedmonitoring.business_details.business_name]]">
+  <meta name="twitter:card" content="summary">
+  <!--facebook-->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Home | [[ruggedmonitoring.business_details.business_name]]">
+  <meta property="og:url" content="[[ruggedmonitoring.rootaliasurl.url]]">
+  <meta property="og:image" content="[[ruggedmonitoring.business_details.home_banner.url]]">
+  <meta property="og:site_name" content="[[ruggedmonitoring.business_details.business_name]]">
+  <meta property="og:description" content="[[ruggedmonitoring.business_details.business_name]] - [[ruggedmonitoring.business_details.about_ruggedmonitoring.substr(0,230).replace('\n','')]]">
+  
+  
+  <title>Downloads - Rugged  Monitoring</title>
+  
+  [[Partial('/partial/_commonHEAD.html')]]
+  [[Partial('/partial/_schemaLocalBusiness.html')]]
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Page Header -->
+    [[Partial('/partial/_header.html')]]
+    <!-- Main Content -->
+    <div id="content" role="main">
+        <!-- Promo Section -->
+        <section class="section blackbg">
+        <div class="container-fluid">
+         <div class="row-fluid">
+          <div class="super-hero-unit">
+            <figure>
+              <picture>
+                  <source srcset="/images/bannerimages/Download-Center.jpg" media="(min-width: 1200px)" />
+                  <source srcset="/images/bannerimages/Download-Center-mobile.jpg" media="(max-width: 420px)" />
+                  <img src="/images/bannerimages/Download-Center.jpg"  alt="Rugged Monitoring - Downloads" />
+                </picture>
+                <div class="flex-caption slidertxt">
+                  <figcaption >
+                      <div class="bannerblock">
+                        <h1>
+                           Downloads
+                        </h1>
+                     <p>Useful documents on Rugged Monitoring Solution for users to download</p>
+                     </div>
+                  </figcaption>
+                </div>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+        
+      	<!-- start: Downloads Box --> 
+      	<section class="section-alt section-padded">
+      		<div class="container-fluid">
+      		  <div class="row-fluid">
+      				<div class="span12">
+      					<ul class="breadcrumb margin-bottom-0">
+      						<li><a href="/">Home</a> <span class="divider">»</span></li>
+      						<li><a >Resources</a> <span class="divider">»</span></li>
+      						<li class="active">Downloads</li>
+      					</ul>
+      				</div>
+      			</div>
+      			<div class="row-fluid">
+      				<div class="span12">
+      					<div class="section-header">
+      						<h1>Download Categories</h1>
+      					</div>
+      					<div class="links-box">
+      						<ul class="download-links">
+      						  <k k-repeat="[[ruggedmonitoring.download_categories, i, 0:ruggedmonitoring.download_categories.length()]]">
+        							<li>
+        								<a href="downloads/[[ruggedmonitoring.download_categories[i].uid]]">
+        									<img class="thumbnail" src="[[ruggedmonitoring.download_categories[i].category_image.url]]" alt="[[ruggedmonitoring.download_categories[i].category_image.description]]">
+        									<span class="link-text">[[ruggedmonitoring.download_categories[i].category_name.toupper()]]</span>
+        								</a>
+        							</li>
+      							</k>
+      							<li>
+      								<a href="[[View('/app-notes.html').geturl()]]">
+      									<img class="thumbnail" src="/images/thumbnails/APPLICATION_NOTES.png" alt="application notes">
+      									<span class="link-text">APPLICATION NOTES</span>
+      								</a>
+      							</li>
+      						</ul>
+      					</div>
+      				</div>
+      			</div>
+      		</div>
+      	</section>
+      	<!-- end: Downloads Box -->
+    
+        <!--Latest news-->
+        [[Partial('/partial/_latestNews.html')]]
+        [[Partial('/partial/_footer2.html')]]
+      </div>
+  </div>
+  <!-- Page Footer -->
+
+  <script src="javascripts/jquery.min.js" type="text/javascript"></script>
+  <script src="javascripts/bootstrap.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.flexslider-min.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.tweet.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.fancybox-media.js" type="text/javascript"></script>
+  <script src="javascripts/script.js" type="text/javascript"></script>
+  <script src="/javascripts/moment.min.js" type="text/javascript"></script>
+  <!--<script src="/javascripts/downloads.js" type="text/javascript"></script>-->
+
+</body>
+</html>
